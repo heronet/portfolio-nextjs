@@ -1,6 +1,8 @@
 import React from "react";
 import { cn } from "@/lib/utils";
-import { Spotlight } from "./ui/spotlight";
+
+import ExploreBtn from "./explore-btn";
+import { Spotlight } from "../ui/spotlight";
 
 export default function Hero() {
   return (
@@ -34,27 +36,7 @@ export default function Hero() {
           development.
         </p>
 
-        <button className="relative mx-auto mt-8 flex h-10  overflow-hidden rounded-lg p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50">
-          <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
-          <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-lg bg-slate-950 px-3 py-1 text-sm font-medium text-white backdrop-blur-3xl">
-            Let's Explore
-            <svg
-              fill="none"
-              height="22"
-              width="22"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M10.75 8.75L14.25 12L10.75 15.25"
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="1.5"
-              />
-            </svg>
-          </span>
-        </button>
+        <ExploreBtn />
       </div>
     </div>
   );

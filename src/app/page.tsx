@@ -1,5 +1,5 @@
-import Hero from "@/components/hero";
-import Overview from "@/components/overview";
+import Hero from "@/components/hero/hero";
+import Overview from "@/components/overview/overview";
 
 export default function Home() {
   return (
