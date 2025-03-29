@@ -8,14 +8,14 @@ export default function Overview() {
   const items = [
     {
       title: "Frontend",
-      description: "My most recent frontend stack",
+      description: "My prefered frontend stack",
       header: <FrontendStack />,
       col: 1,
       row: 1,
     },
     {
       title: "Backend",
-      description: "My most recent backend stack",
+      description: "My favorite backend tools",
       header: <BackendStack />,
       col: 1,
       row: 1,
