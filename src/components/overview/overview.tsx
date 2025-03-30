@@ -7,21 +7,21 @@ import { MobileStack } from "./mobile";
 export default function Overview() {
   const items = [
     {
-      title: "Frontend",
+      title: "Frontend Stack",
       description: "My prefered frontend stack",
       header: <FrontendStack />,
       col: 1,
       row: 1,
     },
     {
-      title: "Backend",
+      title: "Backend Stack",
       description: "My favorite backend tools",
       header: <BackendStack />,
       col: 1,
       row: 1,
     },
     {
-      title: "Mobile",
+      title: "Mobile Development",
       description: "Tools I use to develop mobile applications",
       header: <MobileStack />,
       col: 1,
