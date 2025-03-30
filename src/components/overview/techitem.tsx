@@ -1,52 +1,35 @@
-import {
-  Preload,
-  useTexture,
-  Float,
-  Decal,
-  Loader,
-  OrbitControls,
-} from "@react-three/drei";
-import { Canvas } from "@react-three/fiber";
-import { Suspense } from "react";
+import { motion } from "motion/react";
+import Image from "next/image";
 
-export function ItemCanvas({ icon }: { icon: string }) {
+export default function TechItem({
+  icon,
+}: {
+  icon: { src: string; alt: string };
+}) {
   return (
-    <Canvas
-      gl={{ preserveDrawingBuffer: true }}
-      fallback={
-        <Loader dataInterpolation={(p) => `Loading ${p.toFixed(2)}%`} />
-      }
-    >
-      <Suspense>
-        <OrbitControls enableZoom={false} />
-        <Item icon={icon} />
-      </Suspense>
-      <Preload all />
-    </Canvas>
-  );
-}
-
-function Item({ icon }: { icon: string }) {
-  const map = useTexture(icon);
-  return (
-    <Float floatIntensity={5} speed={5}>
-      <ambientLight />
-      <directionalLight position={[0, 0, 1]} />
-      <mesh scale={2.75}>
-        <icosahedronGeometry args={[1, 1]} />
-        <meshStandardMaterial
-          color={"white"}
-          polygonOffset
-          polygonOffsetFactor={-4}
-          flatShading
+    <motion.div className="relative group" whileHover={{ scale: 1.1 }}>
+      <motion.div
+        className="w-16 h-16 mx-auto rounded-full bg-white shadow-lg flex items-center justify-center p-4"
+        animate={{
+          rotate: [0, 360],
+        }}
+        transition={{
+          duration: 8,
+          ease: "linear",
+          repeat: Infinity,
+        }}
+      >
+        <Image
+          src={icon.src}
+          alt={icon.alt}
+          width={64}
+          height={64}
+          className="object-contain"
         />
-        <Decal
-          map={map}
-          scale={0.8}
-          position={[0, 0, 1]}
-          rotation={[2 * Math.PI, 0, 6.25]}
-        />
-      </mesh>
-    </Float>
+      </motion.div>
+      <motion.span className="absolute -bottom-6 opacity-0 group-hover:opacity-100 left-1/2 transform -translate-x-1/2 text-xs font-medium text-center whitespace-nowrap">
+        {icon.alt}
+      </motion.span>
+    </motion.div>
   );
 }
