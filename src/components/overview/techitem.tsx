@@ -27,7 +27,7 @@ export default function TechItem({
           className="object-contain"
         />
       </motion.div>
-      <motion.span className="absolute -bottom-6 opacity-0 group-hover:opacity-100 left-1/2 transform -translate-x-1/2 text-xs font-medium text-center whitespace-nowrap">
+      <motion.span className="absolute duration-200 -bottom-6 opacity-0 group-hover:opacity-100 left-1/2 transform -translate-x-1/2 text-xs font-medium text-center whitespace-nowrap">
         {icon.alt}
       </motion.span>
     </motion.div>
