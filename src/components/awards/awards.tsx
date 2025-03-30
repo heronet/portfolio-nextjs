@@ -156,7 +156,7 @@ export function Awards() {
         </h2>
         <p className="text-neutral-700 text-center mx-auto dark:text-neutral-300 text-sm md:text-base max-w-sm">
           I&apos;ve achieved several recognitions throughout the years I&apos;ve
-          been working. Here are soem of them.
+          been working. Here are some of them.
         </p>
       </div>
       <Timeline data={data} />
