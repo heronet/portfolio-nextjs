@@ -1,6 +1,6 @@
 "use client";
 import typescript from "@/assets/typescript.png";
-import next from "@/assets/Next.js.png";
+import next from "@/assets/nextjs.png";
 import tailwind from "@/assets/tailwind.png";
 import svelte from "@/assets/svelte.png";
 import { ItemCanvas } from "./techitem";
