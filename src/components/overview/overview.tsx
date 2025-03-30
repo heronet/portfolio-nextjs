@@ -30,7 +30,7 @@ export default function Overview() {
   ];
 
   return (
-    <div id="#overview">
+    <div id="overview">
       <BentoGrid className="max-w-4xl mx-auto p-4">
         {items.map((item, i) => (
           <BentoGridItem

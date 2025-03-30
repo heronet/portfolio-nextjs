@@ -23,6 +23,8 @@ body,
 #root {
   height: 100%;
   margin: unset;
+  --scroll-behavior: smooth !important;
+  scroll-behavior: smooth !important;
 }
 
 @theme inline {

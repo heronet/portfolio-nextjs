@@ -149,7 +149,7 @@ export function Awards() {
     },
   ];
   return (
-    <div className="max-w-4xl mx-auto mt-24">
+    <div className="max-w-4xl mx-auto mt-24" id="awards">
       <div className="max-w-7xl mx-auto text-center py-20 px-4 md:px-8 lg:px-10">
         <h2 className="text-lg md:text-4xl mb-4 text-black dark:text-white max-w-4xl">
           Achievements and awards

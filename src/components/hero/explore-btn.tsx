@@ -1,6 +1,8 @@
+import Link from "next/link";
+
 export default function ExploreBtn() {
   return (
-    <a
+    <Link
       href="#overview"
       className="relative w-fit mx-auto mt-8 flex h-10  overflow-hidden rounded-lg p-[1px] focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50"
     >
@@ -23,6 +25,6 @@ export default function ExploreBtn() {
           />
         </svg>
       </span>
-    </a>
+    </Link>
   );
 }
