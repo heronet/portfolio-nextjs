@@ -53,7 +53,10 @@ const experiences = [
 
 export default function Experience() {
   return (
-    <div className="max-w-7xl mx-auto mt-24 w-full p-8" id="experience">
+    <div
+      className="max-w-7xl mx-auto mt-24 w-full p-8 font-sans"
+      id="experience"
+    >
       <div className="max-w-7xl mx-auto flex flex-col justify-center items-center  py-20 px-4 md:px-8 lg:px-10">
         <h2 className="text-lg md:text-4xl mb-4 text-black dark:text-white">
           Work Experience
@@ -74,10 +77,10 @@ export default function Experience() {
               />
             </div>
             <div className="flex flex-col w-full">
-              <p className="font-bold text-lg">{exp.company}</p>
+              <p className="font-bold text-xl">{exp.company}</p>
               {exp.roles.map((role, j) => (
                 <div key={j} className="">
-                  <p className="flex justify-between">
+                  <p className="flex  justify-between">
                     <span>{role.title}</span> <span>{role.period}</span>
                   </p>
                   <ul className="list-disc text-neutral-400 mb-6 mt-1 px-4 max-w-3xl">
