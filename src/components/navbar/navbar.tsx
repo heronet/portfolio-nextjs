@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { FloatingNav } from "./ui/floating-navbar";
+import { FloatingNav } from "../ui/floating-navbar";
 import {
   IconAward,
   IconBriefcase,
@@ -11,7 +11,7 @@ import {
   IconUserCheck,
 } from "@tabler/icons-react";
 
-export function Navbar() {
+export default function Navbar() {
   const navItems = [
     {
       name: "Home",
