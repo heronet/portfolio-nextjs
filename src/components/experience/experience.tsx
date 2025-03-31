@@ -4,6 +4,7 @@ import cam from "@/assets/experience/cam.png";
 import Image from "next/image";
 import { GlowingEffect } from "../ui/glowing-effect";
 import { GithubGlobe } from "./github-globe";
+import { IconCircleCheck } from "@tabler/icons-react";
 
 const experiences = [
   {
@@ -112,8 +113,11 @@ export default function Experience() {
                           <span>{role.title}</span> <span>{role.period}</span>
                         </p>
                         <ul className="space-y-1 text-neutral-400  mt-3  max-w-3xl">
-                          {role.details.map((det) => (
-                            <li key={det}>{det}</li>
+                          {role.details.map((det, i) => (
+                            <li key={i} className="flex  gap-2">
+                              <IconCircleCheck className="min-w-4 mni-h-4 w-4 h-4 mt-1" />
+                              <span>{det}</span>
+                            </li>
                           ))}
                         </ul>
                       </div>
