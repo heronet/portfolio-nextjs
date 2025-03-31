@@ -31,14 +31,14 @@ export default function Navbar() {
       ),
     },
     {
-      name: "Awards",
-      link: "#awards",
-      icon: <IconAward className="h-4 w-4 text-neutral-500 dark:text-white" />,
-    },
-    {
       name: "Projects",
       link: "#projects",
       icon: <IconHammer className="h-4 w-4 text-neutral-500 dark:text-white" />,
+    },
+    {
+      name: "Awards",
+      link: "#awards",
+      icon: <IconAward className="h-4 w-4 text-neutral-500 dark:text-white" />,
     },
     {
       name: "Education",
