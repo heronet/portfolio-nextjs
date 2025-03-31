@@ -11,15 +11,16 @@ import Recommendations from "@/components/recommendations/recommendations";
 
 export default function Home() {
   return (
-    <div className="">
+    <div>
       <Navbar />
       <Hero />
       <Overview />
       <Experience />
       <Awards />
+      <Recommendations />
+      {/* TODO */}
       <Projects />
       <Education />
-      <Recommendations />
       <Contact />
       <Footer />
     </div>
