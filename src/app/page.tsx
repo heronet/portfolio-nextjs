@@ -10,8 +10,8 @@ export default function Home() {
       <Navbar />
       <Hero />
       <Overview />
-      <Awards />
       <Experience />
+      <Awards />
     </div>
   );
 }

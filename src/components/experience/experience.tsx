@@ -3,6 +3,7 @@ import hackules from "@/assets/experience/hackules.png";
 import cam from "@/assets/experience/cam.png";
 import Image from "next/image";
 import { GlowingEffect } from "../ui/glowing-effect";
+import { GithubGlobe } from "./github-globe";
 
 const experiences = [
   {
@@ -68,43 +69,60 @@ export default function Experience() {
       </div>
       {/*  */}
 
-      <div className="relative h-full rounded-2xl border border-gray-700  p-2  md:rounded-3xl md:p-3">
-        <GlowingEffect
-          spread={40}
-          glow={true}
-          disabled={false}
-          proximity={64}
-          inactiveZone={0.01}
-        />
-        <div className="relative flex  flex-col justify-between gap-3 h-full overflow-hidden rounded-xl border-0.75 px-3 py-6  shadow-[0px_0px_27px_0px_#2D2D2D] md:p-6">
-          {experiences.map((exp, i) => (
-            <div key={i} className="flex gap-6">
-              <div className="">
-                <Image
-                  src={exp.logo}
-                  alt={exp.company}
-                  className="rounded-3xl min-w-16 min-h-16 w-16 h-16 p-2 bg-gray-900 object-contain"
-                />
-              </div>
-              <div className="flex flex-col w-full">
-                <p className="font-bold text-lg md:text-xl">{exp.company}</p>
-                <div className="space-y-6">
-                  {exp.roles.map((role, j) => (
-                    <div key={j} className="">
-                      <p className="flex max-sm:text-sm max-sm:flex-col gap-1 justify-between">
-                        <span>{role.title}</span> <span>{role.period}</span>
-                      </p>
-                      <ul className="space-y-1 text-neutral-400  mt-3  max-w-3xl">
-                        {role.details.map((det) => (
-                          <li key={det}>{det}</li>
-                        ))}
-                      </ul>
-                    </div>
-                  ))}
+      <div className="max-lg:flex flex-col grid grid-cols-5 gap-4">
+        {/* Globe */}
+        <div className="relative col-span-2 h-full rounded-2xl border border-gray-700  p-2  md:rounded-3xl md:p-3">
+          <GlowingEffect
+            spread={40}
+            glow={true}
+            disabled={false}
+            proximity={64}
+            inactiveZone={0.01}
+          />
+          <div className="relative flex  flex-col justify-center items-center gap-3 h-full overflow-hidden rounded-xl border-0.75  shadow-[0px_0px_27px_0px_#2D2D2D] ">
+            <GithubGlobe />
+          </div>
+        </div>
+
+        {/* Info */}
+        <div className="relative col-span-3 h-full rounded-2xl border border-gray-700  p-2  md:rounded-3xl md:p-3">
+          <GlowingEffect
+            spread={40}
+            glow={true}
+            disabled={false}
+            proximity={64}
+            inactiveZone={0.01}
+          />
+          <div className="relative flex  flex-col justify-between gap-6 h-full overflow-hidden rounded-xl border-0.75 px-3 py-6  shadow-[0px_0px_27px_0px_#2D2D2D] md:p-6">
+            {experiences.map((exp, i) => (
+              <div key={i} className="flex gap-6">
+                <div className="">
+                  <Image
+                    src={exp.logo}
+                    alt={exp.company}
+                    className="rounded-3xl min-w-16 min-h-16 w-16 h-16 p-2 bg-gray-900 object-contain"
+                  />
+                </div>
+                <div className="flex flex-col w-full">
+                  <p className="font-bold text-lg md:text-xl">{exp.company}</p>
+                  <div className="space-y-6">
+                    {exp.roles.map((role, j) => (
+                      <div key={j} className="">
+                        <p className="flex max-sm:text-sm mt-1 max-sm:flex-col gap-1 justify-between">
+                          <span>{role.title}</span> <span>{role.period}</span>
+                        </p>
+                        <ul className="space-y-1 text-neutral-400  mt-3  max-w-3xl">
+                          {role.details.map((det) => (
+                            <li key={det}>{det}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </div>
