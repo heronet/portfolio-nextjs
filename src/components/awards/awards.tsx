@@ -8,7 +8,7 @@ import cit from "@/assets/certs/cit.jpeg";
 import nsc from "@/assets/certs/nsc.jpeg";
 import hackjsi from "@/assets/certs/hackjsi.jpeg";
 
-export function Awards() {
+export default function Awards() {
   const data = [
     {
       title: "2024",

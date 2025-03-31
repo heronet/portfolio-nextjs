@@ -1,4 +1,5 @@
-import { Awards } from "@/components/awards/awards";
+import Awards from "@/components/awards/awards";
+import Contact from "@/components/contact/contact";
 import Education from "@/components/education/education";
 import Experience from "@/components/experience/experience";
 import Footer from "@/components/footer/footer";
@@ -19,6 +20,7 @@ export default function Home() {
       <Projects />
       <Education />
       <Recommendations />
+      <Contact />
       <Footer />
     </div>
   );
