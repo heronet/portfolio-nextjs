@@ -154,7 +154,7 @@ export default function Awards() {
         <h2 className="text-lg md:text-4xl mb-4 text-black dark:text-white">
           Achievements and awards
         </h2>
-        <p className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base ">
+        <p className="text-neutral-700 text-center dark:text-neutral-300 text-sm md:text-base ">
           I&apos;ve achieved several recognitions throughout the years I&apos;ve
           been working. Here are some of them.
         </p>

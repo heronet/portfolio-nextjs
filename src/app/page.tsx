@@ -16,10 +16,10 @@ export default function Home() {
       <Hero />
       <Overview />
       <Experience />
+      <Projects />
       <Awards />
       <Recommendations />
       {/* TODO */}
-      <Projects />
       <Education />
       <Contact />
       <Footer />
