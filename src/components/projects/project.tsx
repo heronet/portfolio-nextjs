@@ -48,7 +48,7 @@ export default function Project({ project }: ProjectProps) {
                       src={img}
                       alt={ii.toString()}
                       key={ii}
-                      className="w-fit h-7"
+                      className="w-fit h-7 bg-white p-1 rounded-full"
                     />
                   ))}
                 </div>
