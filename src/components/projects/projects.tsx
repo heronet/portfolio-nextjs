@@ -1,8 +1,12 @@
 "use client";
+import Project from "./project";
 import opedemy from "@/assets/projects/opedemy.png";
 import hiar from "@/assets/projects/hiar.png";
 import tt from "@/assets/projects/tt.png";
-import Project from "./project";
+import typescript from "@/assets/typescript.png";
+import next from "@/assets/nextjs.png";
+import tailwind from "@/assets/tailwind.png";
+import svelte from "@/assets/svelte.png";
 
 export default function Projects() {
   const projects = [
@@ -18,6 +22,7 @@ export default function Projects() {
       ],
       link: "https://opedemy.com",
       image: opedemy,
+      stack: [svelte, typescript, tailwind],
     },
     {
       company: "Hackules Inc.",
@@ -31,6 +36,7 @@ export default function Projects() {
       ],
       link: "https://hiar.ac",
       image: hiar,
+      stack: [svelte, typescript, tailwind],
     },
     {
       company: "Hackules Inc.",
@@ -43,6 +49,7 @@ export default function Projects() {
       ],
       link: "https://teacherstoday.org",
       image: tt,
+      stack: [next, typescript, tailwind],
     },
   ];
 

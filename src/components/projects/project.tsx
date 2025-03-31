@@ -10,6 +10,7 @@ interface ProjectProps {
     year: string;
     title: string;
     tasks: string[];
+    stack: StaticImageData[];
     link: string;
     image: StaticImageData;
   };
@@ -38,8 +39,19 @@ export default function Project({ project }: ProjectProps) {
               <p className="text-sm text-gray-500 dark:text-neutral-500">
                 {project.company} - {project.year}
               </p>
-              <h3 className="text-2xl font-bold text-black dark:text-white">
+              <h3 className="text-2xl font-bold text-white flex items-center justify-between">
                 {project.title}
+
+                <div className="items-center flex gap-3">
+                  {project.stack.map((img, ii) => (
+                    <Image
+                      src={img}
+                      alt={ii.toString()}
+                      key={ii}
+                      className="w-fit h-7"
+                    />
+                  ))}
+                </div>
               </h3>
             </div>
 
