@@ -3,6 +3,7 @@ import Project from "./project";
 import opedemy from "@/assets/projects/opedemy.png";
 import hiar from "@/assets/projects/hiar.png";
 import tt from "@/assets/projects/tt.png";
+import camreg from "@/assets/projects/camreg.png";
 import typescript from "@/assets/typescript.png";
 import next from "@/assets/nextjs.png";
 import tailwind from "@/assets/tailwind.png";
@@ -43,13 +44,28 @@ export default function Projects() {
       year: "2024",
       title: "Teachers Today",
       tasks: [
-        "Completed and refactored the incomplete codebase of full-stack app using Next.js (frontend) and Express.js (backend)",
-        "Built CRUD operations for teacher resources with MongoDB integration",
-        "Integrated SMS API for sending notifications to teachers for updates & reminders",
+        "Revamped and completed a full-stack teacher recruitment platform (Next.js + Express.js), enabling tutors and students to connect for tuition jobs",
+        "Developed advanced filtering and sorting (location, subject, salary) with dynamic UI components for seamless job matching",
+        "Integrated MongoDB for CRUD operations and SMS API (Twilio) to notify teachers about job posts and application updates",
+        "Implemented role-based dashboards (teachers/students) with tailored workflows for posting jobs, applications, and scheduling",
       ],
       link: "https://teacherstoday.org",
       image: tt,
       stack: [next, typescript, tailwind],
+    },
+    {
+      company: "CAM-SUST",
+      year: "2024",
+      title: "CAM Registration ",
+      tasks: [
+        "Developed a full-stack registration platform from scratch using SvelteKit and TypeScript after discussing requirements with the team",
+        "Implemented server-side logic in `server.ts` to handle form submissions, data processing, and user authentication",
+        "Integrated Google Sheets API and Google Drive API to automate data storage and document management",
+        "Enabled bulk registration capabilities, significantly improving efficiency for CAM-SUST (one of SUST's largest clubs)",
+      ],
+      link: "https://cam-register.vercel.app",
+      image: camreg,
+      stack: [svelte, typescript, tailwind],
     },
   ];
 
@@ -62,8 +78,9 @@ export default function Projects() {
         <h2 className="text-lg md:text-4xl mb-4 text-black dark:text-white">
           Featured Projects
         </h2>
-        <p className="text-neutral-300 text-sm md:text-base ">
-          Some real world projects I have worked on
+        <p className="text-neutral-300 text-sm md:text-base max-w-md text-center">
+          Key projects I developed during my roles at organizations, solving
+          real-world challenges.
         </p>
       </div>
       <div className="flex flex-wrap justify-center w-full gap-6  ">

@@ -26,7 +26,7 @@ export default function Project({ project }: ProjectProps) {
         proximity={64}
         inactiveZone={0.01}
       />
-      <div className="  p-4 md:gap-8 relative justify-between flex-col flex  items-center  h-full overflow-hidden rounded-2xl border-0.75  shadow-[0px_0px_27px_0px_#2D2D2D] ">
+      <div className="p-4 md:gap-8 relative justify-between flex-col flex  items-center  h-full overflow-hidden rounded-2xl border-0.75  shadow-[0px_0px_27px_0px_#2D2D2D] ">
         <div className="flex gap-3  flex-col">
           <Image
             src={project.image}
@@ -39,7 +39,7 @@ export default function Project({ project }: ProjectProps) {
               <p className="text-sm text-gray-500 dark:text-neutral-500">
                 {project.company} - {project.year}
               </p>
-              <h3 className="text-2xl font-bold text-white flex items-center justify-between">
+              <h3 className="text-2xl mt-1 font-bold text-white flex items-center justify-between">
                 {project.title}
 
                 <div className="items-center flex gap-3">
