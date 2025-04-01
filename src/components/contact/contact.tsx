@@ -1,18 +1,194 @@
+"use client";
+import { BackgroundGradient } from "../ui/background-gradient";
+import {
+  IconBrandGithub,
+  IconBrandLinkedin,
+  IconBrandTwitter,
+  IconMail,
+  IconSend,
+  IconMapPin,
+  IconBriefcase,
+  IconDownload,
+} from "@tabler/icons-react";
+
 export default function Contact() {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    console.log("Form submitted");
+  };
+
+  const socialLinks = [
+    {
+      icon: <IconBrandGithub />,
+      url: "https://github.com/heronet",
+      label: "GitHub",
+    },
+    {
+      icon: <IconBrandLinkedin />,
+      url: "https://linkedin.com/in/siratul-islam",
+      label: "LinkedIn",
+    },
+    {
+      icon: <IconBrandTwitter />,
+      url: "https://twitter.com/devsirat",
+      label: "Twitter",
+    },
+    {
+      icon: <IconMail />,
+      url: "mailto:sirat4757@gmail.com",
+      label: "Email",
+    },
+  ];
+
+  const contactInfo = [
+    {
+      icon: <IconMail className="w-5 h-5" />,
+      label: "Email",
+      value: "sirat4757@gmail.com",
+    },
+    {
+      icon: <IconMapPin className="w-5 h-5" />,
+      label: "Based in",
+      value: "Sylhet, Bangladesh",
+    },
+    {
+      icon: <IconBriefcase className="w-5 h-5" />,
+      label: "Open for",
+      value: "Freelance, Part-time, Full-time",
+    },
+  ];
+
   return (
-    <div
-      id="contact"
-      className="h-fit font-sans mt-24  max-w-7xl mx-auto rounded-md flex flex-col antialiased p-4 dark:bg-grid-white/[0.05] items-center justify-center  overflow-hidden"
-    >
-      <div className="max-w-7xl mx-auto flex flex-col justify-center items-center  py-20 px-4 md:px-8 lg:px-10">
+    <div className="max-w-7xl mx-auto mt-24 p-8 w-full" id="contact">
+      <div className="max-w-7xl mx-auto flex flex-col justify-center items-center py-20 px-4 md:px-8 lg:px-10">
         <h2 className="text-lg md:text-4xl mb-4 text-black dark:text-white">
-          Contact
+          Get In Touch
         </h2>
-        <p className="text-neutral-300 text-sm md:text-base ">
-          You can reach out to me anytime. I will reply toyou asap.
+        <p className="text-neutral-700 text-center dark:text-neutral-300 text-sm md:text-base">
+          Have a question or want to work together?
         </p>
       </div>
-      <div id="education">TODO</div>
+
+      <BackgroundGradient className="rounded-[22px] p-4 sm:p-10 bg-white dark:bg-zinc-900">
+        <div className="flex flex-col space-y-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {contactInfo.map((info, index) => (
+              <div
+                key={index}
+                className="p-6 rounded-2xl bg-white/5 border border-white/10 flex items-center space-x-4"
+              >
+                <div className="p-3 bg-white/10 rounded-xl">{info.icon}</div>
+                <div>
+                  <p className="text-neutral-500 dark:text-neutral-400 text-sm">
+                    {info.label}
+                  </p>
+                  <p className="font-medium">{info.value}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
+            <div className="lg:col-span-3 p-6 rounded-2xl bg-white/5 border border-white/10">
+              <h3 className="text-xl font-bold mb-6">Send Me a Message</h3>
+
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div>
+                    <label
+                      htmlFor="name"
+                      className="block text-sm font-medium mb-2"
+                    >
+                      Name
+                    </label>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition"
+                      required
+                    />
+                  </div>
+
+                  <div>
+                    <label
+                      htmlFor="email"
+                      className="block text-sm font-medium mb-2"
+                    >
+                      Email
+                    </label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <label
+                    htmlFor="message"
+                    className="block text-sm font-medium mb-2"
+                  >
+                    Message
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows={4}
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition resize-none"
+                    required
+                  ></textarea>
+                </div>
+
+                <button
+                  type="submit"
+                  className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-xl transition-colors"
+                >
+                  Send Message
+                  <IconSend className="w-4 h-4" />
+                </button>
+              </form>
+            </div>
+
+            <div className="lg:col-span-1 p-6 rounded-2xl bg-white/5 border border-white/10 flex flex-col">
+              <h3 className="text-xl font-bold mb-6">Connect With Me</h3>
+
+              <div className="flex flex-col space-y-4 flex-grow">
+                {socialLinks.map((link, i) => (
+                  <a
+                    key={i}
+                    href={link.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-4 bg-white/10 rounded-xl hover:bg-white/20 transition-colors flex items-center space-x-3"
+                  >
+                    <span className="text-blue-500">{link.icon}</span>
+                    <span>{link.label}</span>
+                  </a>
+                ))}
+              </div>
+
+              <div className="mt-6 pt-6 border-t border-white/10">
+                <a
+                  href="/resume.pdf"
+                  download="Resume - Sirat.pdf"
+                  className="w-full inline-flex items-center justify-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-xl transition-all hover:shadow-lg hover:scale-[1.01]"
+                >
+                  <IconDownload className="w-5 h-5" />
+                  Download Resume
+                </a>
+                <p className="text-neutral-500 dark:text-neutral-400 text-sm mt-4 text-center">
+                  Looking forward to hearing from you!
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </BackgroundGradient>
     </div>
   );
 }

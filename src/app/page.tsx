@@ -20,7 +20,6 @@ export default function Home() {
       <Education />
       <Awards />
       <Recommendations />
-      {/* TODO */}
       <Contact />
       <Footer />
     </div>
