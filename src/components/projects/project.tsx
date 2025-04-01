@@ -31,7 +31,7 @@ export default function Project({ project }: ProjectProps) {
           <Image
             src={project.image}
             alt={project.title}
-            className="object-contain w-full max-w-xl rounded-xl "
+            className="w-full max-w-xl rounded-xl h-56"
           />
 
           <div className="flex flex-col gap-3 ">

@@ -4,6 +4,7 @@ import opedemy from "@/assets/projects/opedemy.png";
 import hiar from "@/assets/projects/hiar.png";
 import tt from "@/assets/projects/tt.png";
 import camreg from "@/assets/projects/camreg.png";
+import goodwill from "@/assets/projects/goodwill.png";
 import typescript from "@/assets/typescript.png";
 import next from "@/assets/nextjs.png";
 import tailwind from "@/assets/tailwind.png";
@@ -13,7 +14,7 @@ export default function Projects() {
   const projects = [
     {
       company: "Hackules Inc.",
-      year: "2024",
+      year: "2025",
       title: "Opedemy",
       tasks: [
         "Spearheaded frontend development using SvelteKit, building the platform from scratch with TypeScript",
@@ -27,7 +28,7 @@ export default function Projects() {
     },
     {
       company: "Hackules Inc.",
-      year: "2024",
+      year: "2025",
       title: "HIAR",
       tasks: [
         "Led SvelteKit-based frontend development for academic research platform",
@@ -55,8 +56,8 @@ export default function Projects() {
     },
     {
       company: "CAM-SUST",
-      year: "2024",
-      title: "CAM Registration ",
+      year: "2025",
+      title: "CAM Registration",
       tasks: [
         "Developed a full-stack registration platform from scratch using SvelteKit and TypeScript after discussing requirements with the team",
         "Implemented server-side logic in `server.ts` to handle form submissions, data processing, and user authentication",
@@ -65,6 +66,20 @@ export default function Projects() {
       ],
       link: "https://cam-register.vercel.app",
       image: camreg,
+      stack: [svelte, typescript, tailwind],
+    },
+    {
+      company: "Personal",
+      year: "2024",
+      title: "GoodWill",
+      tasks: [
+        "Built a full-stack blood donation and volunteer coordination platform from scratch using SvelteKit and TypeScript",
+        "Integrated Google Maps API to connect donors/volunteers with nearby requests and display real-time locations",
+        "Leveraged Gemini API to implement an AI assistant for medical FAQs, first-aid guidance, and donor eligibility checks",
+        "Designed a secure registration system featuring Google OAuth with user roles (donors, volunteers, seekers) and automated notifications",
+      ],
+      link: "https://cam-register.vercel.app",
+      image: goodwill,
       stack: [svelte, typescript, tailwind],
     },
   ];
@@ -79,8 +94,8 @@ export default function Projects() {
           Featured Projects
         </h2>
         <p className="text-neutral-300 text-sm md:text-base max-w-md text-center">
-          Key projects I developed during my roles at organizations, solving
-          real-world challenges.
+          A mix of professional work and personal experiments—built to solve
+          real problems, streamline workflows, or just explore new tech.
         </p>
       </div>
       <div className="flex flex-wrap justify-center w-full gap-6  ">
