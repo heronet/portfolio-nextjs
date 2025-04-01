@@ -137,7 +137,7 @@ export default function Experience() {
                   </div>
                   <div className="mt-2 pt-2 border-t border-gray-800/40">
                     <p className="text-sm">
-                      <span className="font-medium text-purple-400">
+                      <span className="font-medium text-green-400">
                         Technologies:{" "}
                       </span>
                       <span className="text-neutral-300">
