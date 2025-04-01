@@ -67,6 +67,7 @@ export default function Project({ project }: ProjectProps) {
         </div>
         <a
           href={project.link}
+          target="_blank"
           className="px-4 w-full  flex items-center justify-center gap-1 my-4 text-center py-2 rounded-md border cursor-pointer border-neutral-300 bg-neutral-100 text-neutral-700 text-sm hover:-translate-y-1 transform transition duration-200 hover:shadow-md"
         >
           Live link <IconExternalLink className="h-4" />
