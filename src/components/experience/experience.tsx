@@ -96,7 +96,10 @@ export default function Experience() {
           />
           <div className="relative flex  flex-col justify-between gap-6 h-full overflow-hidden rounded-xl border-0.75 px-3 py-6  shadow-[0px_0px_27px_0px_#2D2D2D] md:p-6">
             {experiences.map((exp, i) => (
-              <div key={i} className="flex gap-6">
+              <div
+                key={i}
+                className="flex md:gap-6 gap-3 max-sm:p-4 py-4 max-sm:flex-col"
+              >
                 <div className="">
                   <Image
                     src={exp.logo}
