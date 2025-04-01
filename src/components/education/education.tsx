@@ -82,12 +82,16 @@ export default function Education() {
                 key={i}
                 className="flex md:gap-6 gap-3 max-sm:p-4 py-4 max-sm:flex-col"
               >
-                <div className="">
-                  <Image
-                    src={edu.logo}
-                    alt={edu.institution}
-                    className="rounded-3xl min-w-16 min-h-16 w-16 h-16 p-2 bg-gray-900 object-contain"
-                  />
+                <div className="shrink-0">
+                  <div className="p-1 rounded-2xl bg-gradient-to-br from-blue-500/20 to-purple-600/20">
+                    <div className="bg-gray-900 rounded-xl p-2">
+                      <Image
+                        src={edu.logo}
+                        alt={edu.institution}
+                        className="rounded-lg w-12 h-12 object-contain"
+                      />
+                    </div>
+                  </div>
                 </div>
                 <div className="flex flex-col w-full">
                   <p className="font-bold text-lg md:text-xl">
@@ -95,10 +99,14 @@ export default function Education() {
                   </p>
                   <div className="space-y-6">
                     <div className="">
-                      <p className="flex max-sm:text-sm mt-1 max-sm:flex-col gap-1 justify-between">
-                        <span>{edu.degree.title}</span>{" "}
-                        <span>{edu.degree.period}</span>
-                      </p>
+                      <div className="flex flex-wrap justify-between items-center gap-2 mt-1">
+                        <span className="font-medium text-blue-400">
+                          {edu.degree.title}
+                        </span>
+                        <span className="text-sm text-neutral-400 bg-gray-800/70 px-3 py-1 rounded-full">
+                          {edu.degree.period}
+                        </span>
+                      </div>
                       <ul className="space-y-1 text-neutral-400  mt-3  max-w-3xl">
                         {edu.degree.details.map((det, i) => (
                           <li key={i} className="flex  gap-2">
@@ -110,10 +118,12 @@ export default function Education() {
                     </div>
                   </div>
                   {edu.relevant && (
-                    <div className="mt-3">
-                      <p className="text-sm text-neutral-500">
-                        <span className="font-medium">Relevant: </span>
-                        {edu.relevant}
+                    <div className="mt-2 pt-2 border-t border-gray-800/40">
+                      <p className="text-sm">
+                        <span className="font-medium text-purple-400">
+                          Relevant:{" "}
+                        </span>
+                        <span className="text-neutral-300">{edu.relevant}</span>
                       </p>
                     </div>
                   )}
