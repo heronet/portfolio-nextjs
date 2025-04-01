@@ -17,10 +17,10 @@ export default function Home() {
       <Overview />
       <Experience />
       <Projects />
+      <Education />
       <Awards />
       <Recommendations />
       {/* TODO */}
-      <Education />
       <Contact />
       <Footer />
     </div>

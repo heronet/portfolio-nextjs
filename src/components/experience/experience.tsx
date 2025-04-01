@@ -126,6 +126,12 @@ export default function Experience() {
                       </div>
                     ))}
                   </div>
+                  <div className="mt-3">
+                    <p className="text-sm text-neutral-500">
+                      <span className="font-medium">Relevant: </span>
+                      {exp.technologies}
+                    </p>
+                  </div>
                 </div>
               </div>
             ))}

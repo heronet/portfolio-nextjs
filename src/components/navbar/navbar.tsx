@@ -36,14 +36,14 @@ export default function Navbar() {
       icon: <IconHammer className="h-4 w-4 text-neutral-500 dark:text-white" />,
     },
     {
-      name: "Awards",
-      link: "#awards",
-      icon: <IconAward className="h-4 w-4 text-neutral-500 dark:text-white" />,
-    },
-    {
       name: "Education",
       link: "#education",
       icon: <IconSchool className="h-4 w-4 text-neutral-500 dark:text-white" />,
+    },
+    {
+      name: "Awards",
+      link: "#awards",
+      icon: <IconAward className="h-4 w-4 text-neutral-500 dark:text-white" />,
     },
     {
       name: "Recommendations",
