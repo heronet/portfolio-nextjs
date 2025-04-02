@@ -61,7 +61,7 @@ export const AstronomyContent: React.FC<AstronomyContentProps> = ({
               {organization}
             </p>
           </div>
-          <span className="text-xs font-medium max-sm:mt-1 bg-indigo-100 text-indigo-700 dark:bg-indigo-900/40 dark:text-indigo-300 px-2 py-0.5 rounded-full">
+          <span className="text-xs font-medium max-sm:mt-1   bg-indigo-900/40 text-indigo-300 px-2 py-0.5 rounded-full">
             {period}
           </span>
         </div>

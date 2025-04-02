@@ -124,19 +124,24 @@ export default function Experience() {
                     {exp.roles.map((role, j) => (
                       <div key={j} className="">
                         <div className="flex flex-wrap justify-between items-center gap-2">
-                          <span className="font-medium text-blue-400">
+                          <span className="font-medium text-indigo-300">
                             {role.title}
                           </span>
                           <span className="text-sm text-neutral-400 bg-gray-800/70 px-3 py-1 rounded-full">
                             {role.period}
                           </span>
                         </div>
-                        <ul className="space-y-1 text-neutral-400  mt-2  max-w-3xl">
+                        {/* <ul className="space-y-1 text-neutral-400  mt-2  max-w-3xl">
                           {role.details.map((det, i) => (
                             <li key={i} className="flex  gap-2">
                               <IconCircleCheck className="min-w-4 mni-h-4 w-4 h-4 mt-1" />
                               <span>{det}</span>
                             </li>
+                          ))}
+                        </ul> */}
+                        <ul className="mt-2 space-y-1 text-neutral-600 dark:text-neutral-400 pl-4 list-disc">
+                          {role.details.map((det, index) => (
+                            <li key={index}>{det}</li>
                           ))}
                         </ul>
                       </div>

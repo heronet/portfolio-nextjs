@@ -97,19 +97,17 @@ export default function Education() {
                   <div className="space-y-6">
                     <div className="">
                       <div className="flex flex-wrap justify-between sm:items-center gap-2 mt-1 max-sm:flex-col">
-                        <span className="font-medium text-blue-400">
+                        <span className="font-medium text-indigo-300">
                           {edu.degree.title}
                         </span>
                         <span className="text-sm w-fit text-neutral-400 bg-gray-800/70 px-3 py-1 rounded-full">
                           {edu.degree.period}
                         </span>
                       </div>
-                      <ul className="space-y-1 text-neutral-400  mt-3  max-w-3xl">
-                        {edu.degree.details.map((det, i) => (
-                          <li key={i} className="flex  gap-2">
-                            <IconCircleCheck className="min-w-4 mni-h-4 w-4 h-4 mt-1" />
-                            <span>{det}</span>
-                          </li>
+
+                      <ul className="mt-2 space-y-1 text-neutral-600 dark:text-neutral-400 max-w-3xl pl-4 list-disc">
+                        {edu.degree.details.map((det, index) => (
+                          <li key={index}>{det}</li>
                         ))}
                       </ul>
                     </div>
