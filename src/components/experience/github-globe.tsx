@@ -394,7 +394,7 @@ export function GithubGlobe() {
   ];
 
   return (
-    <Suspense fallback={<p>Loading...</p>}>
+    <Suspense fallback={<GlobePlaceholder />}>
       <div>
         <div className="div max-lg:p-4 max-lg:my-4">
           <h2 className="text-center text-xl sm:text-3xl md:text-4xl font-bold text-black dark:text-white">
@@ -412,3 +412,9 @@ export function GithubGlobe() {
     </Suspense>
   );
 }
+
+const GlobePlaceholder: React.FC = () => (
+  <div className="h-96 w-96 mx-auto flex items-center justify-center">
+    <div className="animate-pulse bg-gray-200 dark:bg-gray-700 rounded-full h-64 w-64"></div>
+  </div>
+);
