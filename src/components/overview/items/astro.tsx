@@ -38,7 +38,7 @@ export const AstronomyContent: React.FC<AstronomyContentProps> = ({
                   left: `${left}%`,
                   opacity: opacity,
                   animation: `twinkle ${
-                    Math.random() * 3
+                    Math.random() * 3 + 0.5
                   }s ease-in-out infinite alternate`,
                 }}
               />

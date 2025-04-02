@@ -80,7 +80,7 @@ export default function Experience() {
       </div>
       {/*  */}
 
-      <div className="max-lg:flex flex-col grid grid-cols-5 gap-4">
+      <div className="max-lg:flex flex-col-reverse grid grid-cols-5 gap-4">
         {/* Globe */}
         <div className="relative col-span-2 h-full rounded-2xl border border-gray-700  p-2  md:rounded-3xl md:p-3">
           <GlowingEffect
