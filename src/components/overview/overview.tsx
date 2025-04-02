@@ -1,9 +1,10 @@
 import React from "react";
 import { BentoGrid, BentoGridItem } from "../ui/bento-grid";
-import { FrontendStack } from "./frontend";
-import { BackendStack } from "./backend";
-import { MobileStack } from "./mobile";
-import OSS from "./oss";
+import { FrontendStack } from "./items/frontend";
+import { BackendStack } from "./items/backend";
+import { MobileStack } from "./items/mobile";
+import { OSS } from "./items/oss";
+import { ArchLinuxContent } from "./items/arch";
 
 export default function Overview() {
   const items = [
@@ -43,6 +44,18 @@ export default function Overview() {
         />
       ),
       col: 2,
+      row: 1,
+    },
+    {
+      content: (
+        <ArchLinuxContent
+          yearsOfUse={5}
+          favoritePackages={["pacman", "neofetch", "vim"]}
+          desktopEnvironment="bspwm + polybar + picom"
+          githubUrl="https://github.com/heronet/bspwm-config"
+        />
+      ),
+      col: 1,
       row: 1,
     },
   ];
