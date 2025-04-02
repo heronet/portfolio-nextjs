@@ -9,7 +9,7 @@ export default function TechItem({
   return (
     <motion.div className="relative group" whileHover={{ scale: 1.1 }}>
       <motion.div
-        className="w-16 h-16 mx-auto rounded-full bg-white shadow-lg flex items-center justify-center p-4"
+        className="w-16 h-16 mx-auto rounded-full bg-gradient-to-br from-blue-500/20 to-purple-600/20 shadow-lg flex items-center justify-center p-4"
         animate={{
           rotate: [0, 360],
         }}
