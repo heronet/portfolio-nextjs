@@ -29,17 +29,20 @@ export default function Overview() {
       row: 1,
     },
     {
-      title: "Open Source",
-      description: "I contribute to open source",
-      content: <OSS />,
+      title: "Recent Open Source Contribution",
+      description: "My most recent open source contribution",
+      content: (
+        <OSS
+          projectName="svelte-cloudinary"
+          technologies={["Svelte", "TypeScript", "npm"]}
+          contributionType="Pull Request"
+          description="Fixed CldVideoPlayer aspect ratio jump on load in the Cloudinary library for Svelte"
+          prNumbers="PR 108/109"
+          releaseVersion="1.3.2"
+          githubUrl="https://github.com/cloudinary-community/svelte-cloudinary/pull/108"
+        />
+      ),
       col: 2,
-      row: 1,
-    },
-    {
-      title: "Open Source",
-      description: "I use to develop mobile applications",
-      content: <OSS />,
-      col: 1,
       row: 1,
     },
   ];
