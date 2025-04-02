@@ -1,4 +1,3 @@
-"use client";
 import Project from "./project";
 import opedemy from "@/assets/projects/opedemy.png";
 import hiar from "@/assets/projects/hiar.png";

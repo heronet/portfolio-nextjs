@@ -1,5 +1,3 @@
-"use client";
-import React from "react";
 import Image, { StaticImageData } from "next/image";
 import { IconCircleCheck, IconExternalLink } from "@tabler/icons-react";
 import { GlowingEffect } from "../ui/glowing-effect";

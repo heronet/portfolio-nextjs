@@ -1,4 +1,3 @@
-"use client";
 import hackules from "@/assets/experience/hackules.png";
 import cam from "@/assets/experience/cam.png";
 import Image from "next/image";

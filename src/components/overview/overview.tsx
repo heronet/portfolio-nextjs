@@ -1,4 +1,3 @@
-import React from "react";
 import { BentoGrid, BentoGridItem } from "../ui/bento-grid";
 import { FrontendStack } from "./items/frontend";
 import { BackendStack } from "./items/backend";
