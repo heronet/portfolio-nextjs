@@ -38,7 +38,7 @@ export default function Recommendations() {
     >
       <div className="max-w-7xl mx-auto flex flex-col justify-center items-center  py-20 px-4 md:px-8 lg:px-10">
         <h2 className="text-lg md:text-4xl mb-4 text-black dark:text-white">
-          Words From My Cowerkers
+          Words From My Coworkers
         </h2>
         <p className="text-neutral-300 text-sm md:text-base ">
           Here are a few words from people I have worked with
