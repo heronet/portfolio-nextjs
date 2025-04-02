@@ -140,7 +140,7 @@ export default function Awards() {
     },
   ];
   return (
-    <div className="max-w-7xl mx-auto mt-24 w-full" id="awards">
+    <div className="max-w-7xl mx-auto mt-24 md:pt-20 w-full" id="awards">
       <SectionHeader
         title="Achievements and awards"
         subtitle="I've achieved several recognitions throughout the years I've
