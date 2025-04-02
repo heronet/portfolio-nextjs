@@ -66,10 +66,7 @@ const experiences = [
 
 export default function Experience() {
   return (
-    <div
-      className="max-w-7xl mx-auto mt-24 w-full p-4 md:p-8 font-sans"
-      id="experience"
-    >
+    <div className="max-w-7xl mx-auto mt-24 w-full p-4 md:p-8 " id="experience">
       <div className="max-w-7xl mx-auto flex flex-col justify-center items-center  py-20 px-4 md:px-8 lg:px-10">
         <h2 className="text-lg md:text-4xl mb-4 text-black dark:text-white">
           Work Experience
@@ -126,7 +123,7 @@ export default function Experience() {
                   <div className="space-y-6">
                     {exp.roles.map((role, j) => (
                       <div key={j} className="">
-                        <div className="flex flex-wrap justify-between items-center gap-2 mt-1">
+                        <div className="flex flex-wrap justify-between items-center gap-2">
                           <span className="font-medium text-blue-400">
                             {role.title}
                           </span>
@@ -134,7 +131,7 @@ export default function Experience() {
                             {role.period}
                           </span>
                         </div>
-                        <ul className="space-y-1 text-neutral-400  mt-3  max-w-3xl">
+                        <ul className="space-y-1 text-neutral-400  mt-2  max-w-3xl">
                           {role.details.map((det, i) => (
                             <li key={i} className="flex  gap-2">
                               <IconCircleCheck className="min-w-4 mni-h-4 w-4 h-4 mt-1" />
@@ -145,7 +142,7 @@ export default function Experience() {
                       </div>
                     ))}
                   </div>
-                  <div className="flex flex-wrap gap-1 mt-2">
+                  <div className="flex flex-wrap gap-1 mt-4">
                     {exp.technologies.map((tech, index) => (
                       <span
                         key={index}

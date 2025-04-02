@@ -118,7 +118,7 @@ export default function Education() {
                     </div>
                   </div>
                   {edu.relevant && (
-                    <div className="flex flex-wrap gap-1 mt-2">
+                    <div className="flex flex-wrap gap-1 mt-4">
                       {edu.relevant.map((tech, index) => (
                         <span
                           key={index}
