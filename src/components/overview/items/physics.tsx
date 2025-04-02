@@ -9,7 +9,6 @@ interface PhysicsContentProps {
 export const PhysicsContent: React.FC<PhysicsContentProps> = ({
   degree,
   university,
-  period,
   interests,
   achievement,
 }) => {

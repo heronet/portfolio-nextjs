@@ -15,7 +15,6 @@ export const AstronomyContent: React.FC<AstronomyContentProps> = ({
   period,
   responsibilities,
   technologies,
-  astronomyInterests = ["Astrophotography", "Cosmology", "Space Exploration"],
 }) => {
   return (
     <div className="flex flex-col h-full">
