@@ -21,7 +21,7 @@ const education = [
         "Developed a Fingerprint Attendance System with ESP8266, SSD1306 OLED Display, and Fingerprint sensor",
       ],
     },
-    relevant: ["ESP32, Arduino, C++"],
+    relevant: ["ESP32", "Arduino", "C++"],
   },
   {
     institution: "Nirjhor Cantonement Public School and College, Dhaka",
@@ -118,13 +118,15 @@ export default function Education() {
                     </div>
                   </div>
                   {edu.relevant && (
-                    <div className="mt-2 pt-2 border-t border-gray-800/40">
-                      <p className="text-sm">
-                        <span className="font-medium text-purple-400">
-                          Relevant:{" "}
+                    <div className="flex flex-wrap gap-1 mt-2">
+                      {edu.relevant.map((tech, index) => (
+                        <span
+                          key={index}
+                          className="px-1.5 py-0.5 text-xs rounded-sm bg-neutral-100 text-neutral-600 dark:bg-neutral-800 dark:text-neutral-300"
+                        >
+                          {tech}
                         </span>
-                        <span className="text-neutral-300">{edu.relevant}</span>
-                      </p>
+                      ))}
                     </div>
                   )}
                 </div>
