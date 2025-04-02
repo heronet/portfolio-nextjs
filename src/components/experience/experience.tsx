@@ -4,7 +4,6 @@ import cam from "@/assets/experience/cam.png";
 import Image from "next/image";
 import { GlowingEffect } from "../ui/glowing-effect";
 import { GithubGlobe } from "./github-globe";
-import { IconCircleCheck } from "@tabler/icons-react";
 
 const experiences = [
   {

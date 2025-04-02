@@ -5,8 +5,6 @@ import kd from "@/assets/education/kd.png";
 import Image from "next/image";
 import { GlowingEffect } from "../ui/glowing-effect";
 
-import { IconCircleCheck } from "@tabler/icons-react";
-
 const education = [
   {
     institution: "Shahjalal University of Science & Technology",
