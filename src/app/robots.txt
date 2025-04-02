@@ -1,4 +1,4 @@
 User-Agent: *
 Allow: /
 
-Sitemap: https://sirat.me/sitemap.xml
+Sitemap: https://www.sirat.me/sitemap.xml
