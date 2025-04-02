@@ -18,7 +18,7 @@ interface ProjectProps {
 
 export default function Project({ project }: ProjectProps) {
   return (
-    <div className="relative  sm:w-96  rounded-2xl border border-gray-700  p-2  md:rounded-3xl md:p-3">
+    <div className="relative  sm:w-96  rounded-2xl border border-gray-700  p-2 transition-all duration-300 hover:scale-103  md:rounded-3xl md:p-3">
       <GlowingEffect
         spread={40}
         glow={true}
@@ -31,24 +31,24 @@ export default function Project({ project }: ProjectProps) {
           <Image
             src={project.image}
             alt={project.title}
-            className="w-full max-w-xl rounded-xl sm:h-56"
+            className="w-full max-w-xl rounded-xl transition-all duration-500 hover:scale-105 sm:h-56"
           />
 
           <div className="flex flex-col gap-3 ">
             <div>
-              <p className="text-sm text-gray-500 dark:text-neutral-500">
-                {project.company} - {project.year}
+              <p className="text-sm font-medium text-gray-400">
+                {project.company} · {project.year}
               </p>
               <h3 className="text-2xl mt-1 font-bold text-white flex items-center justify-between">
                 {project.title}
 
-                <div className="items-center flex gap-3">
+                <div className="flex gap-2">
                   {project.stack.map((img, ii) => (
                     <Image
                       src={img}
                       alt={ii.toString()}
                       key={ii}
-                      className="w-fit h-7 bg-white p-1 rounded-full"
+                      className="h-7 w-auto rounded-md bg-gray-800 p-1 transition-all hover:bg-gray-700"
                     />
                   ))}
                 </div>
@@ -68,9 +68,10 @@ export default function Project({ project }: ProjectProps) {
         <a
           href={project.link}
           target="_blank"
-          className="px-4 w-full  flex items-center justify-center gap-1 my-4 text-center py-2 rounded-md border cursor-pointer border-neutral-300 bg-neutral-100 text-neutral-700 text-sm hover:-translate-y-1 transform transition duration-200 hover:shadow-md"
+          rel="noopener noreferrer"
+          className="mt-6 flex w-full items-center justify-center gap-2 rounded-lg border border-gray-700 bg-gray-800 py-3 text-sm font-medium text-gray-200 transition-all duration-300 hover:bg-gray-700"
         >
-          Live link <IconExternalLink className="h-4" />
+          View Project <IconExternalLink className="h-4 w-4" />
         </a>
       </div>
     </div>
