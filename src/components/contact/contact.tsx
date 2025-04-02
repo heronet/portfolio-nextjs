@@ -12,6 +12,7 @@ import {
   IconDownload,
 } from "@tabler/icons-react";
 import { useState } from "react";
+import SectionHeader from "../common/section-header";
 
 export default function Contact() {
   const [isLoading, setIsLoading] = useState(false);
@@ -116,14 +117,10 @@ export default function Contact() {
 
   return (
     <div className="max-w-7xl mx-auto mt-24 p-4 md:p-8 w-full" id="contact">
-      <div className="max-w-7xl mx-auto flex flex-col justify-center items-center py-20 px-4 md:px-8 lg:px-10">
-        <h2 className="text-lg md:text-4xl mb-4 text-black dark:text-white">
-          Get In Touch
-        </h2>
-        <p className="text-neutral-700 text-center dark:text-neutral-300 text-sm md:text-base">
-          Have a question or want to work together?
-        </p>
-      </div>
+      <SectionHeader
+        title="Get In Touch"
+        subtitle="Have a question or want to work together?"
+      />
 
       <BackgroundGradient className="rounded-[22px] p-4 sm:p-10 bg-white dark:bg-zinc-900">
         <div className="flex flex-col space-y-8">

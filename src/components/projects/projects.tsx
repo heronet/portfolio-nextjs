@@ -8,6 +8,7 @@ import typescript from "@/assets/typescript.png";
 import next from "@/assets/nextjs.png";
 import tailwind from "@/assets/tailwind.png";
 import svelte from "@/assets/svelte.png";
+import SectionHeader from "../common/section-header";
 
 export default function Projects() {
   const projects = [
@@ -88,15 +89,11 @@ export default function Projects() {
       id="projects"
       className="h-fit font-sans mt-24  max-w-7xl mx-auto rounded-md flex flex-col antialiased p-4 md:p-8 dark:bg-grid-white/[0.05] items-center justify-center  overflow-hidden"
     >
-      <div className="max-w-7xl mx-auto flex flex-col justify-center items-center  py-20  lg:px-10">
-        <h2 className="text-lg md:text-4xl mb-4 text-black dark:text-white">
-          Featured Projects
-        </h2>
-        <p className="text-neutral-300 text-sm md:text-base max-w-md text-center">
-          A mix of professional work and personal experiments—built to solve
-          real problems, streamline workflows, or just explore new tech.
-        </p>
-      </div>
+      <SectionHeader
+        title="Featured Projects"
+        subtitle="A mix of professional work and personal experiments—built to solve
+          real problems, streamline workflows, or just explore new tech."
+      />
       <div className="flex flex-wrap justify-center w-full gap-6  ">
         {projects.map((project, i) => (
           <Project project={project} key={i} />

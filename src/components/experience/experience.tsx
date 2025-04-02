@@ -3,6 +3,7 @@ import cam from "@/assets/experience/cam.png";
 import Image from "next/image";
 import { GlowingEffect } from "../ui/glowing-effect";
 import { GithubGlobe } from "./github-globe";
+import SectionHeader from "../common/section-header";
 
 const experiences = [
   {
@@ -65,14 +66,10 @@ const experiences = [
 export default function Experience() {
   return (
     <div className="max-w-7xl mx-auto mt-24 w-full p-4 md:p-8 " id="experience">
-      <div className="max-w-7xl mx-auto flex flex-col justify-center items-center  py-20 px-4 md:px-8 lg:px-10">
-        <h2 className="text-lg md:text-4xl mb-4 text-black dark:text-white">
-          Work Experience
-        </h2>
-        <p className="text-neutral-300 text-sm md:text-base ">
-          Companies and organizations I have worked with
-        </p>
-      </div>
+      <SectionHeader
+        title="Work Experience"
+        subtitle="Companies and organizations I have worked with"
+      />
       {/*  */}
 
       <div className="max-lg:flex flex-col-reverse grid grid-cols-5 gap-4">

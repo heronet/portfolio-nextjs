@@ -1,6 +1,5 @@
 "use client";
-import React from "react";
-import { motion } from "motion/react";
+import React, { Suspense } from "react";
 import dynamic from "next/dynamic";
 
 const World = dynamic(() => import("../ui/globe").then((m) => m.World), {
@@ -395,32 +394,21 @@ export function GithubGlobe() {
   ];
 
   return (
-    <div>
-      <motion.div
-        initial={{
-          opacity: 0,
-          y: 20,
-        }}
-        animate={{
-          opacity: 1,
-          y: 0,
-        }}
-        transition={{
-          duration: 1,
-        }}
-        className="div max-lg:p-4 max-lg:my-4"
-      >
-        <h2 className="text-center text-xl sm:text-3xl md:text-4xl font-bold text-black dark:text-white">
-          I work across <br /> Timezones
-        </h2>
-        <p className="text-center max-sm:text-sm  font-normal text-neutral-700 px-4 dark:text-neutral-200 max-w-md mt-2 mx-auto">
-          I am very much open to remote jobs and collaborating with teams from
-          different parts of the world.
-        </p>
-      </motion.div>
-      <div className="h-96 w-96 mx-auto">
-        <World data={sampleArcs} globeConfig={globeConfig} />
+    <Suspense fallback={<p>Loading...</p>}>
+      <div>
+        <div className="div max-lg:p-4 max-lg:my-4">
+          <h2 className="text-center text-xl sm:text-3xl md:text-4xl font-bold text-black dark:text-white">
+            I work across <br /> Timezones
+          </h2>
+          <p className="text-center max-sm:text-sm  font-normal text-neutral-700 px-4 dark:text-neutral-200 max-w-md mt-2 mx-auto">
+            I am very much open to remote jobs and collaborating with teams from
+            different parts of the world.
+          </p>
+        </div>
+        <div className="h-96 w-96 mx-auto">
+          <World data={sampleArcs} globeConfig={globeConfig} />
+        </div>
       </div>
-    </div>
+    </Suspense>
   );
 }

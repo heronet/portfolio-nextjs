@@ -7,6 +7,7 @@ import ndc from "@/assets/certs/ndc.jpeg";
 import cit from "@/assets/certs/cit.jpeg";
 import nsc from "@/assets/certs/nsc.jpeg";
 import hackjsi from "@/assets/certs/hackjsi.jpeg";
+import SectionHeader from "../common/section-header";
 
 export default function Awards() {
   const data = [
@@ -140,15 +141,11 @@ export default function Awards() {
   ];
   return (
     <div className="max-w-7xl mx-auto mt-24 w-full" id="awards">
-      <div className="max-w-7xl mx-auto flex flex-col justify-center items-center  py-20 px-4 md:px-8 lg:px-10">
-        <h2 className="text-lg md:text-4xl mb-4 text-black dark:text-white">
-          Achievements and awards
-        </h2>
-        <p className="text-neutral-700 text-center dark:text-neutral-300 text-sm md:text-base ">
-          I&apos;ve achieved several recognitions throughout the years I&apos;ve
-          been working. Here are some of them.
-        </p>
-      </div>
+      <SectionHeader
+        title="Achievements and awards"
+        subtitle="I've achieved several recognitions throughout the years I've
+          been working. Here are some of them."
+      />
       <Timeline data={data} />
     </div>
   );

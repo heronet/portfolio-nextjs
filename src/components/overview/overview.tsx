@@ -6,6 +6,7 @@ import { OSS } from "./items/oss";
 import { ArchLinuxContent } from "./items/arch";
 import { AstronomyContent } from "./items/astro";
 import { PhysicsContent } from "./items/physics";
+import SectionHeader from "../common/section-header";
 
 export default function Overview() {
   const items = [
@@ -95,7 +96,11 @@ export default function Overview() {
   ];
 
   return (
-    <div id="overview">
+    <div id="overview" className="max-w-7xl mx-auto  w-full p-4 md:p-8">
+      <SectionHeader
+        title="Overview"
+        subtitle="A brief overview of my skills, interests, and contributions"
+      />
       <BentoGrid className="max-w-4xl mx-auto p-4">
         {items.map((item, i) => (
           <BentoGridItem
