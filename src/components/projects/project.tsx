@@ -18,7 +18,7 @@ interface ProjectProps {
 
 export default function Project({ project }: ProjectProps) {
   return (
-    <div className="relative  w-96  rounded-2xl border border-gray-700  p-2  md:rounded-3xl md:p-3">
+    <div className="relative  sm:w-96  rounded-2xl border border-gray-700  p-2  md:rounded-3xl md:p-3">
       <GlowingEffect
         spread={40}
         glow={true}
@@ -31,7 +31,7 @@ export default function Project({ project }: ProjectProps) {
           <Image
             src={project.image}
             alt={project.title}
-            className="w-full max-w-xl rounded-xl h-56"
+            className="w-full max-w-xl rounded-xl sm:h-56"
           />
 
           <div className="flex flex-col gap-3 ">

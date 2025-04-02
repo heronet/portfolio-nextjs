@@ -57,7 +57,7 @@ const experiences = [
 export default function Experience() {
   return (
     <div
-      className="max-w-7xl mx-auto mt-24 w-full p-8 font-sans"
+      className="max-w-7xl mx-auto mt-24 w-full p-4 md:p-8 font-sans"
       id="experience"
     >
       <div className="max-w-7xl mx-auto flex flex-col justify-center items-center  py-20 px-4 md:px-8 lg:px-10">
@@ -100,7 +100,7 @@ export default function Experience() {
                 key={i}
                 className="flex md:gap-6 gap-3 max-sm:p-4 py-4 max-sm:flex-col"
               >
-                <div className="shrink-0">
+                <div className="shrink-0 w-fit">
                   <div className="p-1 rounded-2xl bg-gradient-to-br from-blue-500/20 to-purple-600/20">
                     <div className="bg-gray-900 rounded-xl p-2">
                       <Image

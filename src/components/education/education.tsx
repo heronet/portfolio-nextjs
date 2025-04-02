@@ -53,7 +53,7 @@ const education = [
 export default function Education() {
   return (
     <div
-      className="max-w-7xl mx-auto mt-24 w-full p-8 font-sans"
+      className="max-w-7xl mx-auto mt-24 w-full p-4 md:p-8 font-sans"
       id="education"
     >
       <div className="max-w-7xl mx-auto flex flex-col justify-center items-center  py-20 px-4 md:px-8 lg:px-10">
@@ -82,7 +82,7 @@ export default function Education() {
                 key={i}
                 className="flex md:gap-6 gap-3 max-sm:p-4 py-4 max-sm:flex-col"
               >
-                <div className="shrink-0">
+                <div className="shrink-0 w-fit">
                   <div className="p-1 rounded-2xl bg-gradient-to-br from-blue-500/20 to-purple-600/20">
                     <div className="bg-gray-900 rounded-xl p-2">
                       <Image
@@ -99,11 +99,11 @@ export default function Education() {
                   </p>
                   <div className="space-y-6">
                     <div className="">
-                      <div className="flex flex-wrap justify-between items-center gap-2 mt-1">
+                      <div className="flex flex-wrap justify-between sm:items-center gap-2 mt-1 max-sm:flex-col">
                         <span className="font-medium text-blue-400">
                           {edu.degree.title}
                         </span>
-                        <span className="text-sm text-neutral-400 bg-gray-800/70 px-3 py-1 rounded-full">
+                        <span className="text-sm w-fit text-neutral-400 bg-gray-800/70 px-3 py-1 rounded-full">
                           {edu.degree.period}
                         </span>
                       </div>
