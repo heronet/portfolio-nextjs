@@ -1,9 +1,9 @@
-import React from "react";
 import { cn } from "@/lib/utils";
 
 import ExploreBtn from "./explore-btn";
 import { Spotlight } from "../ui/spotlight";
-import { TextGenerateEffect } from "../ui/text-generate-effect";
+import Intro from "./intro";
+import Welcome from "./welcome";
 
 export default function Hero() {
   return (
@@ -18,28 +18,8 @@ export default function Hero() {
       <Spotlight />
 
       <div className="relative z-10 mx-auto w-full max-w-7xl p-4 pt-20 md:pt-0">
-        <div className="bg-slate-800 mb-4 mx-auto no-underline group w-fit relative shadow-2xl shadow-zinc-900 rounded-full p-px text-xs font-semibold leading-6  text-white block">
-          <span className="absolute inset-0 overflow-hidden rounded-full">
-            <span className="absolute inset-0 rounded-full bg-[image:radial-gradient(75%_100%_at_50%_0%,rgba(56,189,248,0.6)_0%,rgba(56,189,248,0)_75%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
-          </span>
-          <div className="relative flex space-x-2 items-center z-10 rounded-full bg-zinc-950 py-0.5 px-4 ring-1 ring-white/10 ">
-            <span>Welcome to my website</span>
-          </div>
-          <span className="absolute -bottom-0 left-[1.125rem] h-px w-[calc(100%-2.25rem)] bg-gradient-to-r from-emerald-400/0 via-emerald-400/90 to-emerald-400/0 transition-opacity duration-500 group-hover:opacity-40" />
-        </div>
-
-        <h1 className="bg-opacity-50 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-center text-4xl font-bold text-transparent md:text-7xl">
-          Bringing ideas into reality <br /> with quality code.
-        </h1>
-        <div>
-          <TextGenerateEffect
-            className="mx-auto mt-4 max-w-lg font-sans text-center text-base  font-normal text-neutral-300"
-            words="I'm Sirat, a Software Engineer
-          specializing in full-stack web development and cross-platform mobile
-          development."
-          />
-        </div>
-
+        <Welcome />
+        <Intro />
         <ExploreBtn />
       </div>
     </div>
