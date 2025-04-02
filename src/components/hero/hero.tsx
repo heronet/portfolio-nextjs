@@ -3,6 +3,7 @@ import { cn } from "@/lib/utils";
 
 import ExploreBtn from "./explore-btn";
 import { Spotlight } from "../ui/spotlight";
+import { TextGenerateEffect } from "../ui/text-generate-effect";
 
 export default function Hero() {
   return (
@@ -30,11 +31,14 @@ export default function Hero() {
         <h1 className="bg-opacity-50 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-center text-4xl font-bold text-transparent md:text-7xl">
           Bringing ideas into reality <br /> with quality code.
         </h1>
-        <p className="mx-auto mt-4 max-w-lg font-sans text-center text-base font-normal text-neutral-300">
-          This is <span className="">Sirat</span>, a Software Engineer
+        <div>
+          <TextGenerateEffect
+            className="mx-auto mt-4 max-w-lg font-sans text-center text-base  font-normal text-neutral-300"
+            words="I'm Sirat, a Software Engineer
           specializing in full-stack web development and cross-platform mobile
-          development.
-        </p>
+          development."
+          />
+        </div>
 
         <ExploreBtn />
       </div>
