@@ -14,7 +14,27 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Siratul Islam",
-  description: "Welcome to my website.",
+  description:
+    "Welcome to the official website of Siratul Islam. I am a fullstack Software Engineer",
+  keywords: [
+    "Software Engineer",
+    "Portfolio",
+    "Web Developer",
+    "Frontend Developer",
+    "Backend Developer",
+    "SvelteKit",
+    "Next.js",
+    "ASP.NET Core",
+  ],
+  viewport: "width=device-width, initial-scale=1",
+  themeColor: "#ffffff",
+  openGraph: {
+    title: "Siratul Islam",
+    description:
+      "Welcome to the official website of Siratul Islam. I am a fullstack Software Engineer",
+    url: "https://www.sirat.me",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
