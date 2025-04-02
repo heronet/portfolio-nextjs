@@ -29,8 +29,18 @@ const experiences = [
         ],
       },
     ],
-    technologies:
-      "SvelteKit, Next.Js, Django, Express, Typescript, Flutter, Facebook Graph API, LinkedIn API, Firebase, Dart",
+    technologies: [
+      "SvelteKit",
+      "Next.Js",
+      "Django",
+      "Express",
+      "Typescript",
+      "Flutter",
+      "Facebook Graph API",
+      "LinkedIn API",
+      "Firebase",
+      "Dart",
+    ],
   },
   {
     company: "Copernicus Astronomical Memorial of SUST",
@@ -50,7 +60,7 @@ const experiences = [
         details: ["Created tutorials on Python for beginners."],
       },
     ],
-    technologies: "SvelteKit, Typescript, Google Sheets API, Wordpress",
+    technologies: ["SvelteKit", "Typescript", "Google Sheets API", "Wordpress"],
   },
 ];
 
@@ -135,15 +145,15 @@ export default function Experience() {
                       </div>
                     ))}
                   </div>
-                  <div className="mt-2 pt-2 border-t border-gray-800/40">
-                    <p className="text-sm">
-                      <span className="font-medium text-purple-400">
-                        Technologies:{" "}
+                  <div className="flex flex-wrap gap-1 mt-2">
+                    {exp.technologies.map((tech, index) => (
+                      <span
+                        key={index}
+                        className="px-1.5 py-0.5 text-xs rounded-sm bg-neutral-100 text-neutral-600 dark:bg-neutral-800 dark:text-neutral-300"
+                      >
+                        {tech}
                       </span>
-                      <span className="text-neutral-300">
-                        {exp.technologies}
-                      </span>
-                    </p>
+                    ))}
                   </div>
                 </div>
               </div>

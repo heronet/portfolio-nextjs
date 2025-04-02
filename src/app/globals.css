@@ -68,3 +68,13 @@ body {
   white-space: nowrap;
   animation: typing 1.5s steps(14);
 }
+
+/* Stars */
+@keyframes twinkle {
+  0% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 0.8;
+  }
+}

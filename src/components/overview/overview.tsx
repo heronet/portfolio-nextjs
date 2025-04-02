@@ -5,6 +5,8 @@ import { BackendStack } from "./items/backend";
 import { MobileStack } from "./items/mobile";
 import { OSS } from "./items/oss";
 import { ArchLinuxContent } from "./items/arch";
+import { AstronomyContent } from "./items/astro";
+import { PhysicsContent } from "./items/physics";
 
 export default function Overview() {
   const items = [
@@ -13,21 +15,18 @@ export default function Overview() {
       description: "My prefered frontend stack",
       content: <FrontendStack />,
       col: 1,
-      row: 1,
     },
     {
       title: "Backend Stack",
       description: "My favorite backend tools",
       content: <BackendStack />,
       col: 1,
-      row: 1,
     },
     {
       title: "Mobile Development",
       description: "Tools I use to develop mobile applications",
       content: <MobileStack />,
       col: 1,
-      row: 1,
     },
     {
       title: "Recent Open Source Contribution",
@@ -44,7 +43,6 @@ export default function Overview() {
         />
       ),
       col: 2,
-      row: 1,
     },
     {
       content: (
@@ -56,7 +54,44 @@ export default function Overview() {
         />
       ),
       col: 1,
-      row: 1,
+    },
+    {
+      content: (
+        <PhysicsContent
+          degree="Bachelor of Science (Hons.) in Physics"
+          university="Shahjalal University of Science and Technology"
+          period="Aug 2023 - Aug 2027"
+          interests={["Quantum Mechanics", "Astrophysics"]}
+          achievement="Bronze Medal, University Physics Competition 2024"
+        />
+      ),
+      col: 1,
+    },
+    {
+      content: (
+        <AstronomyContent
+          role="IT Secretary"
+          organization="Copernicus Astronomical Memorial of SUST"
+          period="Nov 2024 - Present"
+          responsibilities={[
+            "Organized in-person member recruitment event",
+            "Created online recruitment form and user management system",
+            "Managed digital presence and technical resources",
+          ]}
+          technologies={[
+            "SvelteKit",
+            "TypeScript",
+            "Google Sheets API",
+            "WordPress",
+          ]}
+          astronomyInterests={[
+            "Astrophotography",
+            "Star Observation",
+            "Space Technology",
+          ]}
+        />
+      ),
+      col: 2,
     },
   ];
 
