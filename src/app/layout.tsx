@@ -32,6 +32,12 @@ export const metadata: Metadata = {
       "Welcome to the official website of Siratul Islam. I am a fullstack Software Engineer",
     url: "https://www.sirat.me",
     type: "website",
+    images: [
+      {
+        url: "https://www.sirat.me/og-image.png",
+        alt: "Siratul Islam | Software Engineer",
+      },
+    ],
   },
 };
 
