@@ -1,4 +1,5 @@
 import Project from "./project";
+import SectionHeader from "../common/section-header";
 import opedemy from "@/assets/projects/opedemy.png";
 import hiar from "@/assets/projects/hiar.png";
 import tt from "@/assets/projects/tt.png";
@@ -8,7 +9,11 @@ import typescript from "@/assets/typescript.png";
 import next from "@/assets/nextjs.png";
 import tailwind from "@/assets/tailwind.png";
 import svelte from "@/assets/svelte.png";
-import SectionHeader from "../common/section-header";
+import node from "@/assets/node.svg";
+import mongo from "@/assets/mongo.svg";
+import maps from "@/assets/maps.svg";
+import gemini from "@/assets/gemini.svg";
+import sheets from "@/assets/sheets.svg";
 
 export default function Projects() {
   const projects = [
@@ -51,7 +56,7 @@ export default function Projects() {
       ],
       link: "https://teacherstoday.org",
       image: tt,
-      stack: [next, typescript, tailwind],
+      stack: [next, node, mongo],
     },
     {
       company: "CAM-SUST",
@@ -65,7 +70,7 @@ export default function Projects() {
       ],
       link: "https://cam-register.vercel.app",
       image: camreg,
-      stack: [svelte, typescript, tailwind],
+      stack: [svelte, typescript, sheets],
     },
     {
       company: "Personal",
@@ -79,7 +84,7 @@ export default function Projects() {
       ],
       link: "http://goodwillweb.vercel.app",
       image: goodwill,
-      stack: [svelte, typescript, tailwind],
+      stack: [svelte, typescript, tailwind, maps, gemini],
     },
   ];
 
