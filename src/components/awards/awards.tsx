@@ -15,7 +15,7 @@ export default function Awards() {
       title: "2024",
       content: (
         <div>
-          <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
+          <p className="text-neutral-200 text-xs md:text-sm font-normal mb-8">
             University Physics Competition
           </p>
           <div className="flex flex-col gap-4">
@@ -37,7 +37,7 @@ export default function Awards() {
       title: "2023",
       content: (
         <div>
-          <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
+          <p className="text-neutral-200 text-xs md:text-sm font-normal mb-8">
             Harvard University
           </p>
           <div className="flex flex-col gap-4">
@@ -55,7 +55,7 @@ export default function Awards() {
       title: "2023",
       content: (
         <div>
-          <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
+          <p className="text-neutral-200 text-xs md:text-sm font-normal mb-8">
             HackerRank Certifications
           </p>
           <div className="flex flex-col gap-4">
@@ -76,7 +76,7 @@ export default function Awards() {
       title: "2021",
       content: (
         <div>
-          <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
+          <p className="text-neutral-200 text-xs md:text-sm font-normal mb-8">
             Notre Dame Science Fest - Third Prize
           </p>
           <div className="flex flex-col gap-4">
@@ -98,7 +98,7 @@ export default function Awards() {
       title: "2021",
       content: (
         <div>
-          <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
+          <p className="text-neutral-200 text-xs md:text-sm font-normal mb-8">
             Inter Cantonment IT Fest - First Prize
           </p>
           <div className="flex flex-col gap-4">
@@ -120,7 +120,7 @@ export default function Awards() {
       title: "2021",
       content: (
         <div>
-          <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
+          <p className="text-neutral-200 text-xs md:text-sm font-normal mb-8">
             Nirjhor Cantonment Public School and College IT Fest - First Prize
           </p>
           <div className="flex flex-col gap-4">

@@ -53,7 +53,7 @@ export default function Project({ project }: ProjectProps) {
               </h3>
             </div>
 
-            <ul className="space-y-2 text-sm text-neutral-600 dark:text-neutral-400 mt-2">
+            <ul className="space-y-2 text-sm text-neutral-400 mt-2">
               {project.tasks.map((task, i) => (
                 <li key={i} className="flex  gap-2">
                   <IconCircleCheck className="min-w-4 mni-h-4 w-4 h-4 mt-1" />

@@ -122,7 +122,7 @@ export default function Contact() {
         subtitle="Have a question or want to work together?"
       />
 
-      <BackgroundGradient className="rounded-[22px] p-4 sm:p-10 bg-white dark:bg-zinc-900">
+      <BackgroundGradient className="rounded-[22px] p-4 sm:p-10 bg-zinc-900">
         <div className="flex flex-col space-y-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {contactInfo.map((info, index) => (
@@ -132,9 +132,7 @@ export default function Contact() {
               >
                 <div className="p-3 bg-white/10 rounded-xl">{info.icon}</div>
                 <div>
-                  <p className="text-neutral-500 dark:text-neutral-400 text-sm">
-                    {info.label}
-                  </p>
+                  <p className="text-neutral-400 text-sm">{info.label}</p>
                   <p className="font-medium">{info.value}</p>
                 </div>
               </div>
@@ -241,7 +239,7 @@ export default function Contact() {
                   <IconDownload className="w-5 h-5" />
                   Download Resume
                 </a>
-                <p className="text-neutral-500 dark:text-neutral-400 text-sm mt-4 text-center">
+                <p className="text-neutral-400 text-sm mt-4 text-center">
                   Looking forward to hearing from you!
                 </p>
               </div>

@@ -32,7 +32,7 @@ export default function Recommendations() {
   return (
     <div
       id="recommendations"
-      className="h-fit max-w-7xl mx-auto rounded-md mt-24 flex flex-col antialiased p-4 dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden"
+      className="h-fit max-w-7xl mx-auto rounded-md mt-24 flex flex-col antialiased p-4 bg-grid-white/[0.05] items-center justify-center relative overflow-hidden"
     >
       <SectionHeader
         title="Words From My Coworkers"

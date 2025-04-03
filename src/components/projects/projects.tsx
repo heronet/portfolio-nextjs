@@ -87,7 +87,7 @@ export default function Projects() {
   return (
     <div
       id="projects"
-      className="h-fit font-sans mt-24  max-w-7xl mx-auto rounded-md flex flex-col antialiased p-4 md:p-8 dark:bg-grid-white/[0.05] items-center justify-center  overflow-hidden"
+      className="h-fit font-sans mt-24  max-w-7xl mx-auto rounded-md flex flex-col antialiased p-4 md:p-8 bg-grid-white/[0.05] items-center justify-center  overflow-hidden"
     >
       <SectionHeader
         title="Featured Projects"

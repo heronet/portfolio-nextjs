@@ -14,41 +14,37 @@ export default function Navbar() {
     {
       name: "Home",
       link: "/",
-      icon: <IconHome className="h-4 w-4 text-neutral-500 dark:text-white" />,
+      icon: <IconHome className="h-4 w-4 text-white" />,
     },
     {
       name: "Overview",
       link: "#overview",
-      icon: <IconTarget className="h-4 w-4 text-neutral-500 dark:text-white" />,
+      icon: <IconTarget className="h-4 w-4 text-white" />,
     },
     {
       name: "Experience",
       link: "#experience",
-      icon: (
-        <IconBriefcase className="h-4 w-4 text-neutral-500 dark:text-white" />
-      ),
+      icon: <IconBriefcase className="h-4 w-4 text-white" />,
     },
     {
       name: "Projects",
       link: "#projects",
-      icon: <IconHammer className="h-4 w-4 text-neutral-500 dark:text-white" />,
+      icon: <IconHammer className="h-4 w-4 text-white" />,
     },
     {
       name: "Education",
       link: "#education",
-      icon: <IconSchool className="h-4 w-4 text-neutral-500 dark:text-white" />,
+      icon: <IconSchool className="h-4 w-4 text-white" />,
     },
     {
       name: "Awards",
       link: "#awards",
-      icon: <IconAward className="h-4 w-4 text-neutral-500 dark:text-white" />,
+      icon: <IconAward className="h-4 w-4 text-white" />,
     },
     {
       name: "Recommendations",
       link: "#recommendations",
-      icon: (
-        <IconUserCheck className="h-4 w-4 text-neutral-500 dark:text-white" />
-      ),
+      icon: <IconUserCheck className="h-4 w-4 text-white" />,
     },
   ];
   return <FloatingNav navItems={navItems} />;

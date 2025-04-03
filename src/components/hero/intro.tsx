@@ -7,7 +7,7 @@ export default function Intro() {
       {/* <h1 className="bg-opacity-50 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-center text-4xl font-bold text-transparent md:text-7xl">
                   Bringing ideas into reality <br /> with quality code.
                 </h1> */}
-      <h1 className="relative z-10 mx-auto max-w-4xl text-center text-4xl font-bold text-slate-700  md:text-7xl dark:text-slate-300">
+      <h1 className="relative z-10 mx-auto max-w-4xl text-center text-4xl font-bold   md:text-7xl text-slate-300">
         {"Bringing ideas into reality with quality code"
           .split(" ")
           .map((word, index) => (
@@ -37,7 +37,7 @@ export default function Intro() {
           duration: 0.3,
           delay: 0.8,
         }}
-        className="relative z-10 mx-auto max-w-xl  py-4 text-center text-lg font-normal text-neutral-600 dark:text-neutral-400"
+        className="relative z-10 mx-auto max-w-xl  py-4 text-center text-lg font-normal text-neutral-400"
       >
         I&apos;m Sirat, a Software Engineer specializing in full-stack web
         development and cross-platform mobile development.

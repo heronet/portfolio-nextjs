@@ -134,7 +134,7 @@ export default function Experience() {
                             </li>
                           ))}
                         </ul> */}
-                        <ul className="mt-2 space-y-1 text-neutral-600 dark:text-neutral-400 pl-4 list-disc">
+                        <ul className="mt-2 space-y-1 text-neutral-400 pl-4 list-disc">
                           {role.details.map((det, index) => (
                             <li key={index}>{det}</li>
                           ))}
@@ -146,7 +146,7 @@ export default function Experience() {
                     {exp.technologies.map((tech, index) => (
                       <span
                         key={index}
-                        className="px-1.5 py-0.5 text-xs rounded-sm bg-neutral-100 text-neutral-600 dark:bg-neutral-800 dark:text-neutral-300"
+                        className="px-1.5 py-0.5 text-xs rounded-sm bg-neutral-800text-neutral-300"
                       >
                         {tech}
                       </span>

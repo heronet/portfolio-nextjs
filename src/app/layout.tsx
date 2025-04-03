@@ -26,8 +26,6 @@ export const metadata: Metadata = {
     "Next.js",
     "ASP.NET Core",
   ],
-  viewport: "width=device-width, initial-scale=1",
-  themeColor: "#ffffff",
   openGraph: {
     title: "Siratul Islam",
     description:

@@ -21,28 +21,28 @@ export const ArchLinuxContent: React.FC<ArchLinuxContentProps> = ({
       </div>
 
       <div className="flex flex-col items-center mb-4">
-        <p className="text-base font-mono flex items-center gap-2 text-neutral-800 dark:text-neutral-200">
+        <p className="text-base font-mono flex items-center gap-2 text-neutral-200">
           <span className="opacity-70">$ </span>
           <span className="typing-text">I use Arch btw</span>
           <span className="animate-pulse">_</span>
         </p>
       </div>
 
-      <div className="terminal-output bg-neutral-100 dark:bg-neutral-800 rounded-md p-2 font-mono text-xs text-neutral-700 dark:text-neutral-300 mb-3">
+      <div className="terminal-output bg-neutral-800 rounded-md p-2 font-mono text-xs text-neutral-300 mb-3">
         <div className="flex justify-between">
-          <span className="text-green-600 dark:text-green-400">OS</span>
+          <span className="text-green-400">OS</span>
           <span>Arch Linux</span>
         </div>
         <div className="flex justify-between">
-          <span className="text-green-600 dark:text-green-400">DE</span>
+          <span className="text-green-400">DE</span>
           <span>{desktopEnvironment}</span>
         </div>
         <div className="flex justify-between">
-          <span className="text-green-600 dark:text-green-400">Experience</span>
+          <span className="text-green-400">Experience</span>
           <span>{yearsOfUse} years</span>
         </div>
         <div className="flex justify-between">
-          <span className="text-green-600 dark:text-green-400">Packages</span>
+          <span className="text-green-400">Packages</span>
           <span>{favoritePackages.join(", ")}</span>
         </div>
       </div>
@@ -51,7 +51,7 @@ export const ArchLinuxContent: React.FC<ArchLinuxContentProps> = ({
         {githubUrl && (
           <a
             href={githubUrl}
-            className="inline-flex items-center text-xs font-medium text-neutral-600 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-200 transition-colors"
+            className="inline-flex items-center text-xs font-medium text-neutral-400 hover:text-neutral-200 transition-colors"
             target="_blank"
             rel="noopener noreferrer"
           >

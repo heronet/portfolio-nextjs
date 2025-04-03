@@ -34,26 +34,22 @@ export const PhysicsContent: React.FC<PhysicsContentProps> = ({
       </div>
 
       <div className="text-center mb-3">
-        <h4 className="font-medium text-neutral-800 dark:text-neutral-200 text-sm">
-          {degree}
-        </h4>
-        <p className="text-xs text-neutral-600 dark:text-neutral-400">
-          {university}
-        </p>
-        {/* <span className="text-xs font-medium text-neutral-500 dark:text-neutral-400">
+        <h4 className="font-medium text-neutral-200 text-sm">{degree}</h4>
+        <p className="text-xs text-neutral-400">{university}</p>
+        {/* <span className="text-xs font-medium text-neutral-400">
           {period}
         </span> */}
       </div>
 
       <div className="mb-3">
-        <h5 className="text-xs font-medium text-neutral-700 dark:text-neutral-300 mb-2 text-center">
+        <h5 className="text-xs font-medium text-neutral-300 mb-2 text-center">
           Areas of Interest
         </h5>
         <div className="flex flex-wrap justify-center gap-1.5">
           {interests.map((interest, index) => (
             <span
               key={index}
-              className="px-2 py-1 text-xs rounded-full bg-neutral-100 text-neutral-700 dark:bg-neutral-800 dark:text-neutral-300"
+              className="px-2 py-1 text-xs rounded-full bg-neutral-800 text-neutral-300"
             >
               {interest}
             </span>
@@ -62,8 +58,8 @@ export const PhysicsContent: React.FC<PhysicsContentProps> = ({
       </div>
 
       {achievement && (
-        <div className="mt-auto bg-amber-50 dark:bg-amber-900/20 rounded-md p-2 text-center">
-          <span className="text-xs font-medium text-amber-700 dark:text-amber-300">
+        <div className="mt-auto bg-amber-900/20 rounded-md p-2 text-center">
+          <span className="text-xs font-medium text-amber-300">
             {achievement}
           </span>
         </div>
