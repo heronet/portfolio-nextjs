@@ -8,7 +8,6 @@ import Navbar from "@/components/navbar/navbar";
 import Overview from "@/components/overview/overview";
 import Projects from "@/components/projects/projects";
 import Recommendations from "@/components/recommendations/recommendations";
-import { Analytics } from "@vercel/analytics/next";
 
 export default function Home() {
   return (
@@ -23,8 +22,6 @@ export default function Home() {
       <Recommendations />
       <Contact />
       <Footer />
-
-      <Analytics />
     </div>
   );
 }
