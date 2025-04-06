@@ -146,7 +146,7 @@ export default function Experience() {
                     {exp.technologies.map((tech, index) => (
                       <span
                         key={index}
-                        className="px-1.5 py-0.5 text-xs rounded-sm bg-neutral-800text-neutral-300"
+                        className="px-1.5 py-0.5 text-xs rounded-sm bg-neutral-800 text-neutral-300"
                       >
                         {tech}
                       </span>
