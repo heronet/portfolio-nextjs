@@ -18,6 +18,8 @@ export const metadata: Metadata = {
   description:
     "Siratul Islam | Software Engineer & Physics Student | Expert in SvelteKit, Next.js, Flutter & Full-Stack Development. Bronze Medalist at University Physics Competition 2024 & Harvard CS50x Certified. Passionate about AI, open-source contributions, and building scalable web/mobile apps. Explore my projects, skills, and achievements at sirat.me.",
   keywords: [
+    "Sirat",
+    "Siratul Islam",
     "Software Engineer",
     "Portfolio",
     "Web Developer",
