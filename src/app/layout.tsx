@@ -27,6 +27,10 @@ export const metadata: Metadata = {
     "Next.js",
     "ASP.NET Core",
   ],
+  metadataBase: new URL("https://www.sirat.me"),
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     title: "Siratul Islam | Software Engineer",
     description:
