@@ -82,7 +82,7 @@ export default function Projects() {
         "Leveraged Gemini API to implement an AI assistant for medical FAQs, first-aid guidance, and donor eligibility checks",
         "Designed a secure registration system featuring Google OAuth with user roles (donors, volunteers, seekers)",
       ],
-      link: "http://goodwill.sirat.me",
+      link: "https://goodwill.sirat.me",
       image: goodwill,
       stack: [svelte, typescript, tailwind, maps, gemini],
     },
