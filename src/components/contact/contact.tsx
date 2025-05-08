@@ -92,7 +92,7 @@ export default function Contact() {
     },
     {
       icon: <IconMail />,
-      url: "mailto:sirat4757@gmail.com",
+      url: "mailto:email@sirat.me",
       label: "Email",
     },
   ];
@@ -101,7 +101,7 @@ export default function Contact() {
     {
       icon: <IconMail className="w-5 h-5" />,
       label: "Email",
-      value: "sirat4757@gmail.com",
+      value: "email@sirat.me",
     },
     {
       icon: <IconMapPin className="w-5 h-5" />,
