@@ -33,13 +33,13 @@ export default function Overview() {
       description: "My most recent open source contribution",
       content: (
         <OSS
-          projectName="svelte-cloudinary"
-          technologies={["Svelte", "TypeScript", "npm"]}
+          projectName="zephyrproject-rtos"
+          technologies={["Kconfig", "Devicetree", "C"]}
           contributionType="Pull Request"
-          description="Fixed CldVideoPlayer aspect ratio jump on load in the Cloudinary library for Svelte"
-          prNumbers="PR 108/109"
-          releaseVersion="1.3.2"
-          githubUrl="https://github.com/cloudinary-community/svelte-cloudinary/pull/108"
+          description="boards: arm: Adds support for the WeAct STM32F446 development board with STM32F446RET6 MCU to ZephyrRTOS"
+          prNumbers="PR 91886"
+          releaseVersion="4.2.0"
+          githubUrl="https://github.com/zephyrproject-rtos/zephyr/pull/91886"
         />
       ),
       col: 2,
