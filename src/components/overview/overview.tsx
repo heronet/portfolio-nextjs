@@ -33,7 +33,7 @@ export default function Overview() {
       description: "My most recent open source contribution",
       content: (
         <OSS
-          projectName="zephyrproject-rtos"
+          projectName="zephyrproject-rtos/zephyr"
           technologies={["Kconfig", "Devicetree", "C"]}
           contributionType="Pull Request"
           description="boards: arm: Adds support for the WeAct STM32F446 development board with STM32F446RET6 MCU to ZephyrRTOS"
