@@ -1,6 +1,7 @@
 import Image from "next/image";
 import React from "react";
 import { Timeline } from "@/components/ui/timeline";
+import zephyr from "@/assets/certs/zephyr.png";
 import upc from "@/assets/certs/upc.jpeg";
 import cs50x from "@/assets/certs/cs50x.png";
 import ndc from "@/assets/certs/ndc.jpeg";
@@ -11,6 +12,46 @@ import SectionHeader from "../common/section-header";
 
 export default function Awards() {
   const data = [
+    {
+      title: "2025",
+      content: (
+        <div>
+          <p className="text-neutral-200 text-xs md:text-sm font-normal mb-8">
+            Zephyr RTOS Contributor
+          </p>
+          <div className="flex flex-col gap-4">
+            <p className="max-w-xl">
+              Became an official{" "}
+              <span className="text-sky-400 font-bold">contributor</span> to the
+              <a
+                href="https://github.com/zephyrproject-rtos/zephyr/pull/91886"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-400 underline ml-1"
+              >
+                Zephyr RTOS project
+              </a>{" "}
+              by adding board support for the WeAct Studio STM32F446RET6. Earned
+              a badge from{" "}
+              <a
+                href="https://www.credly.com/badges/112ed413-27ce-4960-a965-ad2df01b8b65"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-400 underline ml-1"
+              >
+                The Linux Foundation
+              </a>{" "}
+              for my contribution.
+            </p>
+            <Image
+              src={zephyr}
+              alt="Zephyr RTOS PR"
+              className="rounded-lg object-cover max-w-xl w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+            />
+          </div>
+        </div>
+      ),
+    },
     {
       title: "2024",
       content: (
