@@ -14,6 +14,7 @@ import mongo from "@/assets/mongo.svg";
 import maps from "@/assets/maps.svg";
 import gemini from "@/assets/gemini.svg";
 import sheets from "@/assets/sheets.svg";
+import { cn } from "@/lib/utils";
 
 export default function Projects() {
   const projects = [
@@ -89,19 +90,30 @@ export default function Projects() {
   ];
 
   return (
-    <div
-      id="projects"
-      className="h-fit font-sans mt-24  max-w-7xl mx-auto rounded-md flex flex-col antialiased p-4 md:p-8 bg-grid-white/[0.05] items-center justify-center  overflow-hidden"
-    >
-      <SectionHeader
-        title="Featured Projects"
-        subtitle="A mix of professional work and personal experiments—built to solve
-          real problems, streamline workflows, or just explore new tech."
+    <div className="relative py-2">
+      <div
+        className={cn(
+          "absolute inset-0",
+          "[background-size:20px_20px]",
+          "[background-image:radial-gradient(#404040_1px,transparent_1px)]"
+        )}
       />
-      <div className="flex flex-wrap justify-center w-full gap-6  ">
-        {projects.map((project, i) => (
-          <Project project={project} key={i} />
-        ))}
+      {/* Radial gradient for the container to give a faded look */}
+      <div className="pointer-events-none absolute inset-0 flex items-center justify-center  [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] bg-background"></div>
+      <div
+        id="projects"
+        className="h-fit font-sans mt-24 max-w-7xl mx-auto rounded-md flex flex-col antialiased p-4 md:p-8 bg-grid-white/[0.05] items-center justify-center  overflow-hidden"
+      >
+        <SectionHeader
+          title="Featured Projects"
+          subtitle="A mix of professional work and personal experiments—built to solve
+          real problems, streamline workflows, or just explore new tech."
+        />
+        <div className="flex flex-wrap justify-center w-full gap-6  z-20">
+          {projects.map((project, i) => (
+            <Project project={project} key={i} />
+          ))}
+        </div>
       </div>
     </div>
   );

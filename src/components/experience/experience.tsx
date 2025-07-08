@@ -2,7 +2,6 @@ import hackules from "@/assets/experience/hackules.png";
 import cam from "@/assets/experience/cam.png";
 import Image from "next/image";
 import { GlowingEffect } from "../ui/glowing-effect";
-import { GithubGlobe } from "./github-globe";
 import SectionHeader from "../common/section-header";
 
 const experiences = [
@@ -12,7 +11,7 @@ const experiences = [
     roles: [
       {
         title: "Software Engineer, Junior",
-        period: "Jun. 2024 - Present",
+        period: "Jun. 2024 - Jun. 2025",
         details: [
           "Led the frontend development of Opedemy, an AI-focused education technology platform.",
           "Handled the full-stack development of Teachers Today, a tuition matching platform.",
@@ -65,16 +64,19 @@ const experiences = [
 
 export default function Experience() {
   return (
-    <div className="max-w-7xl mx-auto mt-24 w-full p-4 md:p-8 " id="experience">
+    <div
+      className="max-w-7xl mx-auto mt-24 w-full p-4 md:p-8 relative"
+      id="experience"
+    >
       <SectionHeader
         title="Work Experience"
         subtitle="Companies and organizations I have worked with"
       />
       {/*  */}
 
-      <div className="max-lg:flex flex-col-reverse grid grid-cols-5 gap-4">
+      <div className="max-lg:flex flex-col-reverse  gap-4">
         {/* Globe */}
-        <div className="relative col-span-2 h-full rounded-2xl border border-gray-700  p-2  md:rounded-3xl md:p-3">
+        {/* <div className="relative col-span-2 h-full rounded-2xl border border-gray-700  p-2  md:rounded-3xl md:p-3">
           <GlowingEffect
             spread={40}
             glow={true}
@@ -85,7 +87,7 @@ export default function Experience() {
           <div className="relative flex  flex-col justify-center items-center gap-3 h-full overflow-hidden rounded-xl border-0.75  shadow-[0px_0px_27px_0px_#2D2D2D] ">
             <GithubGlobe />
           </div>
-        </div>
+        </div> */}
 
         {/* Info */}
         <div className="relative col-span-3 h-full rounded-2xl border border-gray-700  p-2  md:rounded-3xl md:p-3">

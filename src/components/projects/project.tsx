@@ -16,7 +16,7 @@ interface ProjectProps {
 
 export default function Project({ project }: ProjectProps) {
   return (
-    <div className="relative  sm:w-96  rounded-2xl border border-gray-700  p-2 transition-all duration-300 hover:scale-103  md:rounded-3xl md:p-3">
+    <div className="relative bg-background sm:w-96  rounded-2xl border border-gray-700  p-2 transition-all duration-300 hover:scale-103  md:rounded-3xl md:p-3">
       <GlowingEffect
         spread={40}
         glow={true}

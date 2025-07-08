@@ -7,6 +7,7 @@ import { ArchLinuxContent } from "./items/arch";
 import { AstronomyContent } from "./items/astro";
 import { PhysicsContent } from "./items/physics";
 import SectionHeader from "../common/section-header";
+import { SparklesCore } from "../ui/sparkles";
 
 export default function Overview() {
   const items = [
@@ -96,22 +97,37 @@ export default function Overview() {
   ];
 
   return (
-    <div id="overview" className="max-w-7xl mx-auto  w-full p-4 md:p-8">
-      <SectionHeader
-        title="Overview"
-        subtitle="A brief overview of my skills, interests, and contributions"
-      />
-      <BentoGrid className="max-w-4xl mx-auto p-4">
-        {items.map((item, i) => (
-          <BentoGridItem
-            key={i}
-            title={item.title}
-            description={item.description}
-            content={item.content}
-            className={`${item.col === 2 ? "md:col-span-2" : "md:col-span-1"}`}
-          />
-        ))}
-      </BentoGrid>
+    <div className="relative py-16">
+      <div id="overview" className="max-w-7xl mx-auto w-full p-4 md:p-8">
+        <SectionHeader
+          title="Overview"
+          subtitle="A brief overview of my skills, interests, and contributions"
+        />
+        <BentoGrid className="max-w-4xl mx-auto z-10 p-4">
+          {items.map((item, i) => (
+            <BentoGridItem
+              key={i}
+              title={item.title}
+              description={item.description}
+              content={item.content}
+              className={`${
+                item.col === 2 ? "md:col-span-2" : "md:col-span-1"
+              }`}
+            />
+          ))}
+        </BentoGrid>
+      </div>
+      <div className="w-full absolute inset-0 -z-10">
+        <SparklesCore
+          id="tsparticlesfullpage"
+          background="transparent"
+          minSize={0.6}
+          maxSize={1.4}
+          particleDensity={100}
+          className="w-full h-full"
+          particleColor="#FFFFFF"
+        />
+      </div>
     </div>
   );
 }
