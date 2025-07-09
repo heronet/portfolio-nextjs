@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils";
 import stm32f4 from "@/assets/projects/stm32f446_core.webp";
 import esp32att from "@/assets/projects/esp32att.webp";
 import esp32ws from "@/assets/projects/esp32ws.webp";
+import esp32radar from "@/assets/projects/esp32radar.webp";
 import stm32bme280 from "@/assets/projects/stm32bme280.webp";
 
 export default function EmbeddedProjects() {
@@ -41,6 +42,8 @@ export default function EmbeddedProjects() {
         "QMC5883L",
         "SSD1306",
         "WiFi",
+        "IoT",
+        "Arduino",
       ],
       githubUrl: "https://github.com/heronet/esp32s3-weatherstation",
       liveUrl: undefined,
@@ -62,11 +65,24 @@ export default function EmbeddedProjects() {
         "Google Sheets API",
         "NeoPixel",
         "WiFi",
+        "Arduino",
       ],
       githubUrl: "https://github.com/heronet/esp32s3-attendance",
       liveUrl: undefined,
-      image: esp32att, // You can add an image later
+      image: esp32att,
       category: "Personal Project",
+      year: "2025",
+    },
+    {
+      id: 3,
+      title: "ESP32 Radar Smart Switch",
+      description:
+        "Smart presence-detection switch built with ESP-IDF and RD-03D 24Ghz mmWave radar. Detects human presence to automate appliances using relays.",
+      technologies: ["ESP32", "ESP-IDF", "C", "RD-03D Radar", "Relay"],
+      githubUrl: "https://github.com/heronet/esp32_radar_switch",
+      liveUrl: undefined,
+      image: esp32radar,
+      category: "Faculty Project",
       year: "2025",
     },
     {
@@ -76,37 +92,18 @@ export default function EmbeddedProjects() {
         "Custom HAL driver implementation for the Bosch BME280 environmental sensor on STM32 microcontrollers. Provides temperature, humidity, and pressure readings with I2C communication support.",
       technologies: [
         "STM32",
-        "C",
-        "HAL",
         "BME280",
+        "HAL",
+        "C",
         "I2C",
         "Environmental Sensing",
       ],
       githubUrl: "https://github.com/heronet/stm32-bme280-hal",
       liveUrl: undefined,
-      image: stm32bme280, // Using the same image as it's also STM32 related
+      image: stm32bme280,
       category: "Personal Project",
       year: "2025",
     },
-    // {
-    //   id: 5,
-    //   title: "Motor Control System",
-    //   description:
-    //     "Precise stepper motor control system with position feedback, speed regulation, and safety features. Includes custom PCB design and comprehensive control algorithm implementation.",
-    //   technologies: [
-    //     "STM32",
-    //     "C",
-    //     "Motor Control",
-    //     "PCB Design",
-    //     "PWM",
-    //     "Encoders",
-    //   ],
-    //   githubUrl: "https://github.com/yourusername/motor-control",
-    //   liveUrl: undefined,
-    //   image: undefined,
-    //   category: "Personal Project",
-    //   year: "2023",
-    // },
   ];
 
   return (

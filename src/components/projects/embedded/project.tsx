@@ -50,6 +50,8 @@ const Project = ({ project }: ProjectProps) => {
         return <IconGitBranch className="w-4 h-4" />;
       case "Personal Project":
         return <IconBolt className="w-4 h-4" />;
+      case "Faculty Project":
+        return <IconStar className="w-4 h-4" />;
       default:
         return <IconCpu className="w-4 h-4" />;
     }
