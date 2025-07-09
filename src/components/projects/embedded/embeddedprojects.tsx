@@ -3,20 +3,23 @@ import SectionHeader from "../../common/section-header";
 import { cn } from "@/lib/utils";
 
 import stm32f4 from "@/assets/projects/stm32f446_core.webp";
+import esp32att from "@/assets/projects/esp32att.webp";
+import esp32ws from "@/assets/projects/esp32ws.webp";
+import stm32bme280 from "@/assets/projects/stm32bme280.webp";
 
 export default function EmbeddedProjects() {
   const projects = [
     {
       id: 1,
-      title: "STM32F446 Development Board Support",
+      title: "ZephyrRTOS support for WeAct STM32F446RET6",
       description:
         "Added board support for WeAct STM32F446RET6 MCU to ZephyrRTOS. Contributed device tree files, board configuration, and documentation to enable seamless development on this popular development board.",
       technologies: [
-        "C",
-        "Device Tree",
-        "ZephyrRTOS",
         "STM32",
         "ARM Cortex-M4",
+        "ZephyrRTOS",
+        "C",
+        "Device Tree",
       ],
       githubUrl: "https://github.com/zephyrproject-rtos/zephyr/pull/91886",
       liveUrl: undefined,
@@ -36,12 +39,12 @@ export default function EmbeddedProjects() {
         "BME280",
         "BH1750",
         "QMC5883L",
-        "OLED",
+        "SSD1306",
         "WiFi",
       ],
       githubUrl: "https://github.com/heronet/esp32s3-weatherstation",
       liveUrl: undefined,
-      image: undefined, // You can add an image later
+      image: esp32ws, // You can add an image later
       category: "Personal Project",
       year: "2025",
     },
@@ -62,7 +65,7 @@ export default function EmbeddedProjects() {
       ],
       githubUrl: "https://github.com/heronet/esp32s3-attendance",
       liveUrl: undefined,
-      image: undefined, // You can add an image later
+      image: esp32att, // You can add an image later
       category: "Personal Project",
       year: "2025",
     },
@@ -70,19 +73,18 @@ export default function EmbeddedProjects() {
       id: 4,
       title: "STM32 BME280 HAL Driver",
       description:
-        "Custom HAL driver implementation for the Bosch BME280 environmental sensor on STM32 microcontrollers. Provides temperature, humidity, and pressure readings with both I2C and SPI communication support.",
+        "Custom HAL driver implementation for the Bosch BME280 environmental sensor on STM32 microcontrollers. Provides temperature, humidity, and pressure readings with I2C communication support.",
       technologies: [
         "STM32",
         "C",
         "HAL",
         "BME280",
         "I2C",
-        "SPI",
         "Environmental Sensing",
       ],
       githubUrl: "https://github.com/heronet/stm32-bme280-hal",
       liveUrl: undefined,
-      image: undefined, // Using the same image as it's also STM32 related
+      image: stm32bme280, // Using the same image as it's also STM32 related
       category: "Personal Project",
       year: "2025",
     },

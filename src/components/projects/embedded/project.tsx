@@ -91,7 +91,7 @@ const Project = ({ project }: ProjectProps) => {
       className="group relative max-w-sm w-full"
       onMouseMove={handleMouseMove}
     >
-      {/* Aceternity-style spotlight effect */}
+      {/* Spotlight effect */}
       <div
         className="pointer-events-none absolute -inset-px opacity-0 group-hover:opacity-100 transition-opacity duration-300"
         style={{
@@ -99,7 +99,7 @@ const Project = ({ project }: ProjectProps) => {
         }}
       />
 
-      {/* Main card container with Aceternity styling */}
+      {/* Main card container */}
       <div className="relative bg-black/[0.96] h-full backdrop-blur-xl border border-white/[0.08] rounded-xl overflow-hidden transition-all duration-300 group-hover:border-white/[0.12] group-hover:shadow-2xl group-hover:shadow-black/50 flex flex-col">
         {/* Aceternity grid background */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_110%)]" />
@@ -158,9 +158,8 @@ const Project = ({ project }: ProjectProps) => {
           <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60"></div>
         </div>
 
-        {/* Content Section - Now with flex-grow to fill remaining space */}
         <div className="relative p-5 flex-grow flex flex-col">
-          {/* Title with professional styling */}
+          {/* Title */}
           <div className="flex items-start justify-between gap-2 mb-4">
             <h3 className="text-lg font-semibold text-white leading-tight group-hover:text-white/90 transition-colors duration-200">
               {project.title}
@@ -170,12 +169,12 @@ const Project = ({ project }: ProjectProps) => {
             )}
           </div>
 
-          {/* Description with professional typography */}
+          {/* Description wi */}
           <p className="text-neutral-300 text-sm leading-relaxed  group-hover:text-neutral-200 transition-colors duration-200 mb-4">
             {project.description}
           </p>
 
-          {/* Technologies with Aceternity pill styling - Show all technologies */}
+          {/* Technologies */}
           <div className="flex flex-wrap gap-1.5 mb-4">
             {project.technologies.map((tech, index) => (
               <span
@@ -190,7 +189,7 @@ const Project = ({ project }: ProjectProps) => {
           {/* Spacer to push buttons to bottom */}
           <div className="flex-grow"></div>
 
-          {/* Action Buttons with Aceternity button styling - Now at bottom */}
+          {/* Action Buttons */}
           <div className="flex gap-2 pt-1">
             {project.githubUrl && (
               <a
@@ -219,7 +218,7 @@ const Project = ({ project }: ProjectProps) => {
           </div>
         </div>
 
-        {/* Aceternity-style bottom accent */}
+        {/* Bottom accent */}
         <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/[0.1] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
         {/* Corner glow effect */}
