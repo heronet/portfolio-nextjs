@@ -76,13 +76,6 @@ export default function Experience() {
       <div className="max-lg:flex flex-col-reverse  gap-4">
         {/* Globe */}
         {/* <div className="relative col-span-2 h-full rounded-2xl border border-gray-700  p-2  md:rounded-3xl md:p-3">
-          <GlowingEffect
-            spread={40}
-            glow={true}
-            disabled={false}
-            proximity={64}
-            inactiveZone={0.01}
-          />
           <div className="relative flex  flex-col justify-center items-center gap-3 h-full overflow-hidden rounded-xl border-0.75  shadow-[0px_0px_27px_0px_#2D2D2D] ">
             <GithubGlobe />
           </div>
