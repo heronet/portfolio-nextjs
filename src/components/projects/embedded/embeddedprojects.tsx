@@ -1,9 +1,8 @@
-import Project from "./project";
 import SectionHeader from "../../common/section-header";
 import { cn } from "@/lib/utils";
 
 export default function WebProjects() {
-  const projects = [];
+  // const projects = [];
 
   return (
     <div className="relative py-2">
