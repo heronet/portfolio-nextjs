@@ -3,6 +3,7 @@ import { FrontendStack } from "./items/frontend";
 import { BackendStack } from "./items/backend";
 import { MobileStack } from "./items/mobile";
 import { OSS } from "./items/oss";
+import { EmbeddedStack } from "./items/embedded";
 import { ArchLinuxContent } from "./items/arch";
 import { AstronomyContent } from "./items/astro";
 import { PhysicsContent } from "./items/physics";
@@ -28,6 +29,24 @@ export default function Overview() {
       description: "Tools I use to develop mobile applications",
       content: <MobileStack />,
       col: 1,
+    },
+    {
+      content: (
+        <EmbeddedStack
+          microcontrollers={["STM32", "ESP32", "RP2040", "AVR", "PIC", "STM8"]}
+          rtos={["Zephyr RTOS", "FreeRTOS", "ESP-IDF", "Embassy", "Arduino"]}
+          protocols={["I2C", "SPI", "UART", "MQTT", "BLE", "WiFi"]}
+          tools={["STM32CubeIDE", "PlatformIO", "Kconfig", "Devicetree"]}
+          specialization="IoT & Real-time Systems"
+          experience="Enthusiast"
+          contribution={{
+            project: "Zephyr RTOS",
+            description: "Official contributor to Zephyr RTOS project",
+            url: "https://github.com/zephyrproject-rtos/zephyr/pull/91886",
+          }}
+        />
+      ),
+      col: 3,
     },
     {
       title: "Recent Open Source Contribution",
@@ -111,7 +130,11 @@ export default function Overview() {
               description={item.description}
               content={item.content}
               className={`${
-                item.col === 2 ? "md:col-span-2" : "md:col-span-1"
+                item.col === 3
+                  ? "md:col-span-3"
+                  : item.col === 2
+                  ? "md:col-span-2"
+                  : "md:col-span-1"
               }`}
             />
           ))}
