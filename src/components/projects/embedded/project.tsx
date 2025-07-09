@@ -1,77 +1,232 @@
+"use client";
+import React, { useState, useRef } from "react";
+import { cn } from "@/lib/utils";
+import {
+  IconExternalLink,
+  IconBrandGithub,
+  IconCalendar,
+  IconCode,
+  IconCpu,
+  IconBolt,
+  IconArrowUpRight,
+  IconStar,
+  IconGitBranch,
+  IconWifi,
+  IconDatabase,
+} from "@tabler/icons-react";
 import Image, { StaticImageData } from "next/image";
-import { IconCircleCheck, IconExternalLink } from "@tabler/icons-react";
-import { GlowingEffect } from "../../ui/glowing-effect";
 
 interface ProjectProps {
   project: {
-    company: string;
-    year: string;
+    id: number;
     title: string;
-    tasks: string[];
-    stack: StaticImageData[];
-    link: string;
-    image: StaticImageData;
+    description: string;
+    technologies: string[];
+    githubUrl?: string;
+    liveUrl?: string;
+    image?: StaticImageData | string;
+    category: string;
+    year: string;
   };
 }
 
-export default function Project({ project }: ProjectProps) {
+const Project = ({ project }: ProjectProps) => {
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const cardRef = useRef<HTMLDivElement | null>(null);
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+    if (!cardRef.current) return;
+
+    const rect = cardRef.current.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+
+    setMousePosition({ x, y });
+  };
+
+  const getCategoryIcon = (category: string) => {
+    switch (category) {
+      case "Open Source Contribution":
+        return <IconGitBranch className="w-4 h-4" />;
+      case "Personal Project":
+        return <IconBolt className="w-4 h-4" />;
+      default:
+        return <IconCpu className="w-4 h-4" />;
+    }
+  };
+
+  const getCategoryStyle = (category: string) => {
+    switch (category) {
+      case "Open Source Contribution":
+        return "from-emerald-400/10 to-green-400/10 border-emerald-400/20 text-emerald-400";
+      case "Personal Project":
+        return "from-blue-400/10 to-cyan-400/10 border-blue-400/20 text-blue-400";
+      default:
+        return "from-purple-400/10 to-pink-400/10 border-purple-400/20 text-purple-400";
+    }
+  };
+
+  const getProjectIcon = (title: string) => {
+    if (title.toLowerCase().includes("weather")) {
+      return <IconCpu className="w-16 h-16" />;
+    }
+    if (
+      title.toLowerCase().includes("attendance") ||
+      title.toLowerCase().includes("biometric")
+    ) {
+      return <IconDatabase className="w-16 h-16" />;
+    }
+    if (
+      title.toLowerCase().includes("mqtt") ||
+      title.toLowerCase().includes("wifi")
+    ) {
+      return <IconWifi className="w-16 h-16" />;
+    }
+    return <IconCode className="w-16 h-16" />;
+  };
+
   return (
-    <div className="relative bg-background sm:w-96  rounded-2xl border border-gray-700  p-2 transition-all duration-300 hover:scale-103  md:rounded-3xl md:p-3">
-      <GlowingEffect
-        spread={40}
-        glow={true}
-        disabled={false}
-        proximity={64}
-        inactiveZone={0.01}
+    <div
+      ref={cardRef}
+      className="group relative max-w-sm w-full"
+      onMouseMove={handleMouseMove}
+    >
+      {/* Aceternity-style spotlight effect */}
+      <div
+        className="pointer-events-none absolute -inset-px opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+        style={{
+          background: `radial-gradient(600px circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(255,255,255,0.06), transparent 40%)`,
+        }}
       />
-      <div className="p-4 md:gap-8 relative justify-between flex-col flex  items-center  h-full overflow-hidden rounded-2xl border-0.75  shadow-[0px_0px_27px_0px_#2D2D2D] ">
-        <div className="flex gap-3  flex-col">
-          <Image
-            src={project.image}
-            alt={project.title}
-            className="w-full max-w-xl rounded-xl transition-all duration-500 hover:scale-105 sm:h-56"
-          />
 
-          <div className="flex flex-col gap-3 ">
-            <div>
-              <p className="text-sm font-medium text-gray-400">
-                {project.company} · {project.year}
-              </p>
-              <h3 className="text-2xl mt-1 font-bold text-white flex items-center justify-between">
-                {project.title}
+      {/* Main card container with Aceternity styling */}
+      <div className="relative bg-black/[0.96] h-full backdrop-blur-xl border border-white/[0.08] rounded-xl overflow-hidden transition-all duration-300 group-hover:border-white/[0.12] group-hover:shadow-2xl group-hover:shadow-black/50 flex flex-col">
+        {/* Aceternity grid background */}
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_110%)]" />
 
-                <div className="flex gap-2">
-                  {project.stack.map((img, ii) => (
-                    <Image
-                      src={img}
-                      alt={ii.toString()}
-                      key={ii}
-                      className="h-7 w-auto rounded-md bg-gray-800 p-1 transition-all hover:bg-gray-700"
-                    />
-                  ))}
-                </div>
-              </h3>
+        {/* Header Section */}
+        <div className="relative h-56 bg-gradient-to-br from-neutral-900 via-black to-neutral-900 overflow-hidden flex-shrink-0">
+          {/* Content Image or Placeholder */}
+          {project.image ? (
+            <Image
+              src={project.image}
+              alt={project.title}
+              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+          ) : (
+            <div className="flex items-center justify-center h-full relative">
+              <div className="text-6xl text-neutral-600/20 group-hover:text-neutral-500/30 transition-colors duration-300">
+                {getProjectIcon(project.title)}
+              </div>
+              {/* Subtle gradient overlay based on project type */}
+              <div
+                className={cn(
+                  "absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500",
+                  project.title.toLowerCase().includes("weather") &&
+                    "bg-gradient-to-r from-blue-500/5 via-cyan-500/10 to-blue-500/5",
+                  project.title.toLowerCase().includes("attendance") &&
+                    "bg-gradient-to-r from-green-500/5 via-emerald-500/10 to-green-500/5",
+                  project.title.toLowerCase().includes("stm32") &&
+                    "bg-gradient-to-r from-purple-500/5 via-pink-500/10 to-purple-500/5",
+                  !project.title.toLowerCase().includes("weather") &&
+                    !project.title.toLowerCase().includes("attendance") &&
+                    !project.title.toLowerCase().includes("stm32") &&
+                    "bg-gradient-to-r from-blue-500/5 via-purple-500/10 to-blue-500/5"
+                )}
+              ></div>
             </div>
+          )}
 
-            <ul className="space-y-2 text-sm text-neutral-400 mt-2">
-              {project.tasks.map((task, i) => (
-                <li key={i} className="flex  gap-2">
-                  <IconCircleCheck className="min-w-4 mni-h-4 w-4 h-4 mt-1" />
-                  <span>{task}</span>
-                </li>
-              ))}
-            </ul>
+          {/* Top badges with Aceternity styling */}
+          <div className="absolute top-3 left-3 right-3 flex justify-between items-start">
+            <div
+              className={cn(
+                "flex items-center gap-2 px-3 py-1.5 backdrop-blur-sm border rounded-full text-xs font-medium",
+                `bg-gradient-to-r ${getCategoryStyle(project.category)}`
+              )}
+            >
+              {getCategoryIcon(project.category)}
+              {project.category}
+            </div>
+            <div className="flex items-center gap-1 px-3 py-1.5 bg-black/40 backdrop-blur-sm border border-white/[0.08] rounded-full text-xs ">
+              <IconCalendar className="w-3 h-3" />
+              {project.year}
+            </div>
+          </div>
+
+          {/* Gradient overlay */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60"></div>
+        </div>
+
+        {/* Content Section - Now with flex-grow to fill remaining space */}
+        <div className="relative p-5 flex-grow flex flex-col">
+          {/* Title with professional styling */}
+          <div className="flex items-start justify-between gap-2 mb-4">
+            <h3 className="text-lg font-semibold text-white leading-tight group-hover:text-white/90 transition-colors duration-200">
+              {project.title}
+            </h3>
+            {project.category === "Open Source Contribution" && (
+              <IconStar className="w-4 h-4 text-amber-400 opacity-0 group-hover:opacity-100 transition-all duration-200 flex-shrink-0" />
+            )}
+          </div>
+
+          {/* Description with professional typography */}
+          <p className="text-neutral-300 text-sm leading-relaxed  group-hover:text-neutral-200 transition-colors duration-200 mb-4">
+            {project.description}
+          </p>
+
+          {/* Technologies with Aceternity pill styling - Show all technologies */}
+          <div className="flex flex-wrap gap-1.5 mb-4">
+            {project.technologies.map((tech, index) => (
+              <span
+                key={index}
+                className="px-2.5 py-1 text-xs bg-white/[0.05] text-neutral-300 rounded-md border border-white/[0.08] hover:bg-white/[0.08] hover:border-white/[0.12] transition-all duration-200"
+              >
+                {tech}
+              </span>
+            ))}
+          </div>
+
+          {/* Spacer to push buttons to bottom */}
+          <div className="flex-grow"></div>
+
+          {/* Action Buttons with Aceternity button styling - Now at bottom */}
+          <div className="flex gap-2 pt-1">
+            {project.githubUrl && (
+              <a
+                href={project.githubUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 px-4 py-2 bg-white/[0.05] hover:bg-white/[0.08] text-neutral-300 hover:text-white rounded-lg border border-white/[0.08] hover:border-white/[0.12] transition-all duration-200 text-sm font-medium group/btn flex-1 justify-center"
+              >
+                <IconBrandGithub className="w-4 h-4" />
+                Code
+              </a>
+            )}
+
+            {project.liveUrl && (
+              <a
+                href={project.liveUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white rounded-lg transition-all duration-200 text-sm font-medium group/btn flex-1 justify-center shadow-lg shadow-blue-500/25"
+              >
+                <IconExternalLink className="w-4 h-4" />
+                Live
+                <IconArrowUpRight className="w-3 h-3 opacity-0 group-hover/btn:opacity-100 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-all duration-200" />
+              </a>
+            )}
           </div>
         </div>
-        <a
-          href={project.link}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="mt-6 flex w-full items-center justify-center gap-2 rounded-lg border border-gray-700 bg-gray-800 py-3 text-sm font-medium text-gray-200 transition-all duration-300 hover:bg-gray-700"
-        >
-          View Project <IconExternalLink className="h-4 w-4" />
-        </a>
+
+        {/* Aceternity-style bottom accent */}
+        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/[0.1] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+        {/* Corner glow effect */}
+        <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-br from-blue-400/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-bl-2xl"></div>
       </div>
     </div>
   );
-}
+};
+
+export default Project;
