@@ -3,7 +3,6 @@ import ncpsc from "@/assets/education/ncpsc.png";
 import kd from "@/assets/education/kd.png";
 
 import Image from "next/image";
-import { GlowingEffect } from "../ui/glowing-effect";
 import SectionHeader from "../common/section-header";
 
 const education = [
@@ -60,13 +59,6 @@ export default function Education() {
       <div className="max-lg:flex flex-col ">
         {/* Info */}
         <div className="relative col-span-3 h-full rounded-2xl border border-gray-700  p-2  md:rounded-3xl md:p-3">
-          <GlowingEffect
-            spread={40}
-            glow={true}
-            disabled={false}
-            proximity={64}
-            inactiveZone={0.01}
-          />
           <div className="relative flex  flex-col justify-between gap-6 h-full overflow-hidden rounded-xl border-0.75 px-3 py-6  shadow-[0px_0px_27px_0px_#2D2D2D] md:p-6">
             {education.map((edu, i) => (
               <div

@@ -1,6 +1,5 @@
 import Image, { StaticImageData } from "next/image";
 import { IconCircleCheck, IconExternalLink } from "@tabler/icons-react";
-import { GlowingEffect } from "../../ui/glowing-effect";
 
 interface ProjectProps {
   project: {
@@ -17,13 +16,6 @@ interface ProjectProps {
 export default function Project({ project }: ProjectProps) {
   return (
     <div className="relative bg-background sm:w-96  rounded-2xl border border-gray-700  p-2 transition-all duration-300 hover:scale-103  md:rounded-3xl md:p-3">
-      <GlowingEffect
-        spread={40}
-        glow={true}
-        disabled={false}
-        proximity={64}
-        inactiveZone={0.01}
-      />
       <div className="p-4 md:gap-8 relative justify-between flex-col flex  items-center  h-full overflow-hidden rounded-2xl border-0.75  shadow-[0px_0px_27px_0px_#2D2D2D] ">
         <div className="flex gap-3  flex-col">
           <Image
