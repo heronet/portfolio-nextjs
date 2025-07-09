@@ -60,7 +60,7 @@ export default function EmbeddedProjects() {
       technologies: [
         "ESP32-S3",
         "C++",
-        "Fingerprint Sensor",
+        "Fingerprint",
         "BLE",
         "SPIFFS",
         "Google Sheets API",
