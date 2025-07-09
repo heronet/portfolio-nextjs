@@ -1,5 +1,5 @@
 import Project from "./project";
-import SectionHeader from "../common/section-header";
+import SectionHeader from "../../common/section-header";
 import opedemy from "@/assets/projects/opedemy.png";
 import hiar from "@/assets/projects/hiar.png";
 import tt from "@/assets/projects/tt.png";
@@ -16,7 +16,7 @@ import gemini from "@/assets/gemini.svg";
 import sheets from "@/assets/sheets.svg";
 import { cn } from "@/lib/utils";
 
-export default function Projects() {
+export default function WebProjects() {
   const projects = [
     {
       company: "Hackules Inc.",
@@ -105,9 +105,9 @@ export default function Projects() {
         className="h-fit font-sans mt-24 max-w-7xl mx-auto rounded-md flex flex-col antialiased p-4 md:p-8 bg-grid-white/[0.05] items-center justify-center  overflow-hidden"
       >
         <SectionHeader
-          title="Featured Projects"
+          title="Web Projects"
           subtitle="A mix of professional work and personal experiments—built to solve
-          real problems, streamline workflows, or just explore new tech."
+          real problems, streamline workflows, or just explore new tech. - web"
         />
         <div className="flex flex-wrap justify-center w-full gap-6  z-20">
           {projects.map((project, i) => (

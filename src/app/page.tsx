@@ -6,7 +6,8 @@ import Footer from "@/components/footer/footer";
 import Hero from "@/components/hero/hero";
 import Navbar from "@/components/navbar/navbar";
 import Overview from "@/components/overview/overview";
-import Projects from "@/components/projects/projects";
+import WebProjects from "@/components/projects/web/webprojects";
+import EmbeddedProjects from "@/components/projects/embedded/embeddedprojects";
 import Recommendations from "@/components/recommendations/recommendations";
 
 export default function Home() {
@@ -16,7 +17,8 @@ export default function Home() {
       <Hero />
       <Overview />
       <Experience />
-      <Projects />
+      <WebProjects />
+      <EmbeddedProjects />
       <Education />
       <Awards />
       <Recommendations />
