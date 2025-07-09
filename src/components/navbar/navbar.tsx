@@ -2,6 +2,7 @@ import { FloatingNav } from "../ui/floating-navbar";
 import {
   IconAward,
   IconBriefcase,
+  IconCpu,
   IconHammer,
   IconHome,
   IconSchool,
@@ -27,9 +28,14 @@ export default function Navbar() {
       icon: <IconBriefcase className="h-4 w-4 text-white" />,
     },
     {
-      name: "Projects",
-      link: "#projects",
+      name: "Web Projects",
+      link: "#web-projects",
       icon: <IconHammer className="h-4 w-4 text-white" />,
+    },
+    {
+      name: "Embedded Projects",
+      link: "#embedded-projects",
+      icon: <IconCpu className="h-4 w-4 text-white" />,
     },
     {
       name: "Education",

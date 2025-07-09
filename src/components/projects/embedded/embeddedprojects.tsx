@@ -75,7 +75,7 @@ export default function EmbeddedProjects() {
       year: "2025",
     },
     {
-      id: 3,
+      id: 4,
       title: "ESP32 Radar Smart Switch",
       description:
         "Smart presence-detection switch built with ESP-IDF and RD-03D 24Ghz mmWave radar. Detects human presence to automate appliances using relays.",
@@ -87,7 +87,7 @@ export default function EmbeddedProjects() {
       year: "2025",
     },
     {
-      id: 4,
+      id: 5,
       title: "STM32 BME280 HAL Driver",
       description:
         "Custom HAL driver implementation for the Bosch BME280 environmental sensor on STM32 microcontrollers. Provides temperature, humidity, and pressure readings with I2C communication support.",
@@ -127,8 +127,8 @@ export default function EmbeddedProjects() {
           subtitle="Hardware-focused projects spanning microcontroller programming, IoT development, and real-time systems. From contributing to open-source RTOS to building custom automation solutions."
         />
         <div className="flex flex-wrap justify-center w-full gap-6 z-20">
-          {projects.map((project, i) => (
-            <Project project={project} key={i} />
+          {projects.map((project) => (
+            <Project project={project} key={project.id} />
           ))}
         </div>
       </div>
