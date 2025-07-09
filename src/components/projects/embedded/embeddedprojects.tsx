@@ -23,7 +23,8 @@ export default function EmbeddedProjects() {
         "Device Tree",
       ],
       githubUrl: "https://github.com/zephyrproject-rtos/zephyr/pull/91886",
-      liveUrl: undefined,
+      liveUrl:
+        "https://docs.zephyrproject.org/latest/boards/weact/stm32f446_core/doc/index.html",
       image: stm32f4,
       category: "Open Source Contribution",
       year: "2025",

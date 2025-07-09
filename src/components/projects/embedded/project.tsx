@@ -5,14 +5,11 @@ import {
   IconExternalLink,
   IconBrandGithub,
   IconCalendar,
-  IconCode,
   IconCpu,
   IconBolt,
   IconArrowUpRight,
   IconStar,
   IconGitBranch,
-  IconWifi,
-  IconDatabase,
 } from "@tabler/icons-react";
 import Image, { StaticImageData } from "next/image";
 
@@ -24,7 +21,7 @@ interface ProjectProps {
     technologies: string[];
     githubUrl?: string;
     liveUrl?: string;
-    image?: StaticImageData | string;
+    image: StaticImageData;
     category: string;
     year: string;
   };
@@ -68,25 +65,6 @@ const Project = ({ project }: ProjectProps) => {
     }
   };
 
-  const getProjectIcon = (title: string) => {
-    if (title.toLowerCase().includes("weather")) {
-      return <IconCpu className="w-16 h-16" />;
-    }
-    if (
-      title.toLowerCase().includes("attendance") ||
-      title.toLowerCase().includes("biometric")
-    ) {
-      return <IconDatabase className="w-16 h-16" />;
-    }
-    if (
-      title.toLowerCase().includes("mqtt") ||
-      title.toLowerCase().includes("wifi")
-    ) {
-      return <IconWifi className="w-16 h-16" />;
-    }
-    return <IconCode className="w-16 h-16" />;
-  };
-
   return (
     <div
       ref={cardRef}
@@ -108,36 +86,11 @@ const Project = ({ project }: ProjectProps) => {
 
         {/* Header Section */}
         <div className="relative h-56 bg-gradient-to-br from-neutral-900 via-black to-neutral-900 overflow-hidden flex-shrink-0">
-          {/* Content Image or Placeholder */}
-          {project.image ? (
-            <Image
-              src={project.image}
-              alt={project.title}
-              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-            />
-          ) : (
-            <div className="flex items-center justify-center h-full relative">
-              <div className="text-6xl text-neutral-600/20 group-hover:text-neutral-500/30 transition-colors duration-300">
-                {getProjectIcon(project.title)}
-              </div>
-              {/* Subtle gradient overlay based on project type */}
-              <div
-                className={cn(
-                  "absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500",
-                  project.title.toLowerCase().includes("weather") &&
-                    "bg-gradient-to-r from-blue-500/5 via-cyan-500/10 to-blue-500/5",
-                  project.title.toLowerCase().includes("attendance") &&
-                    "bg-gradient-to-r from-green-500/5 via-emerald-500/10 to-green-500/5",
-                  project.title.toLowerCase().includes("stm32") &&
-                    "bg-gradient-to-r from-purple-500/5 via-pink-500/10 to-purple-500/5",
-                  !project.title.toLowerCase().includes("weather") &&
-                    !project.title.toLowerCase().includes("attendance") &&
-                    !project.title.toLowerCase().includes("stm32") &&
-                    "bg-gradient-to-r from-blue-500/5 via-purple-500/10 to-blue-500/5"
-                )}
-              ></div>
-            </div>
-          )}
+          <Image
+            src={project.image}
+            alt={project.title}
+            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+          />
 
           {/* Top badges with Aceternity styling */}
           <div className="absolute top-3 left-3 right-3 flex justify-between items-start">
