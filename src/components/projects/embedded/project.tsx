@@ -163,7 +163,13 @@ const Project = ({ project }: ProjectProps) => {
                 href={project.liveUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white rounded-lg transition-all duration-200 text-sm font-medium group/btn flex-1 justify-center shadow-lg shadow-blue-500/25"
+                className={cn(
+                  "flex items-center gap-2 px-4 py-2 rounded-lg border transition-all duration-200 text-sm font-medium group/btn flex-1 justify-center",
+                  "hover:border-white/[0.12] border-white/[0.08]",
+                  `bg-gradient-to-r ${getCategoryStyle(
+                    project.category
+                  )} text-inherit`
+                )}
               >
                 <IconExternalLink className="w-4 h-4" />
                 Live
