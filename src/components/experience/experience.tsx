@@ -9,7 +9,7 @@ const experiences = [
     logo: hackules,
     roles: [
       {
-        title: "Software Engineer, Junior",
+        title: "Software Engineer",
         period: "Jun. 2024 - Jun. 2025",
         details: [
           "Led the frontend development of Opedemy, an AI-focused education technology platform.",
