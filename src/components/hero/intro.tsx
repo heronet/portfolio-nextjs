@@ -40,7 +40,7 @@ export default function Intro() {
         className="relative z-10 mx-auto max-w-xl  py-4 text-center text-lg font-normal text-neutral-400"
       >
         I&apos;m Sirat, a Software Engineer specializing in full-stack web
-        development and cross-platform mobile development.
+        development and Embedded Systems.
       </motion.p>
     </div>
   );
