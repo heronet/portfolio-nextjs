@@ -230,16 +230,24 @@ export default function Contact() {
                 ))}
               </div>
 
-              <div className="mt-6 pt-6 border-t border-white/10">
+              <div className="mt-6 pt-6 border-t border-white/10 space-y-4">
                 <a
-                  href="/resume.pdf"
+                  href="/resume_ee.pdf"
                   download="Resume - Sirat.pdf"
                   className="w-full inline-flex items-center justify-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-xl transition-all hover:shadow-lg hover:scale-[1.01]"
                 >
                   <IconDownload className="w-5 h-5" />
-                  Download Resume
+                  Resume (EE)
                 </a>
-                <p className="text-neutral-400 text-sm mt-4 text-center">
+                <a
+                  href="/resume_cs.pdf"
+                  download="Resume - Sirat.pdf"
+                  className="w-full inline-flex items-center justify-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-xl transition-all hover:shadow-lg hover:scale-[1.01]"
+                >
+                  <IconDownload className="w-5 h-5" />
+                  Resume (CS)
+                </a>
+                <p className="text-neutral-400 text-sm text-center">
                   Looking forward to hearing from you!
                 </p>
               </div>
