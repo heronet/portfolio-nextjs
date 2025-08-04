@@ -242,10 +242,18 @@ export default function Contact() {
                 <a
                   href="/resume_cs.pdf"
                   download="Resume - Sirat.pdf"
-                  className="w-full inline-flex items-center justify-center gap-2 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-xl transition-all hover:shadow-lg hover:scale-[1.01]"
+                  className="w-full inline-flex items-center justify-center gap-2 px-6 py-3 bg-green-600 hover:bg-green-700 text-white font-medium rounded-xl transition-all hover:shadow-lg hover:scale-[1.01]"
                 >
                   <IconDownload className="w-5 h-5" />
                   Resume (CS)
+                </a>
+                <a
+                  href="/cv.pdf"
+                  download="CV - Sirat.pdf"
+                  className="w-full inline-flex items-center justify-center gap-2 px-6 py-3 bg-red-600 hover:bg-red-700 text-white font-medium rounded-xl transition-all hover:shadow-lg hover:scale-[1.01]"
+                >
+                  <IconDownload className="w-5 h-5" />
+                  CV (EECS)
                 </a>
                 <p className="text-neutral-400 text-sm text-center">
                   Looking forward to hearing from you!
