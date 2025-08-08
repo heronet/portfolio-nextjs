@@ -237,18 +237,22 @@ export default function Contact() {
             <button
               disabled={isLoading}
               type="submit"
-              className="w-full inline-flex items-center justify-center gap-3 px-8 py-4 bg-blue-600 hover:bg-blue-700 disabled:bg-blue-600/50 text-white font-semibold rounded-xl transition-all disabled:cursor-not-allowed"
+              className="group relative w-full px-8 py-4 bg-gradient-to-r from-blue-600/20  to-blue-600/20 hover:from-blue-600/30 hover:to-blue-600/30 border border-blue-500/30 hover:border-blue-400/50 rounded-xl backdrop-blur-md transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed overflow-hidden"
             >
               {isLoading ? (
-                <>
+                <div className="relative z-10 flex items-center justify-center gap-3">
                   <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-                  Sending...
-                </>
+                  <span className="font-semibold text-white/90">
+                    Sending...
+                  </span>
+                </div>
               ) : (
-                <>
-                  <IconSend className="w-5 h-5" />
-                  Send Message
-                </>
+                <div className="relative z-10 flex items-center justify-center gap-3">
+                  <IconSend className="w-5 h-5 text-blue-400 group-hover:text-blue-300 transition-all duration-300 group-hover:translate-x-1" />
+                  <span className="font-semibold text-white group-hover:text-blue-200 transition-colors duration-300">
+                    Send Message
+                  </span>
+                </div>
               )}
             </button>
           </form>
