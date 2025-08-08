@@ -130,7 +130,9 @@ export default function Contact() {
 
       {/* Resume Downloads */}
       <div className="p-4 md:p-8 bg-white/5 border border-white/10 rounded-2xl mb-4">
-        <h3 className="text-xl font-bold mb-6">Download Resume / CV</h3>
+        <h3 className="text-xl font-bold mb-4 md:mb-6">
+          Download My Resume / CV
+        </h3>
         <div className="gap-3 flex max-md:flex-wrap">
           {resumeLinks.map((resume, i) => (
             <a
@@ -156,7 +158,7 @@ export default function Contact() {
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
         {/* Contact Form */}
         <div className="p-4 md:p-8 bg-white/5 border border-white/10 rounded-2xl lg:col-span-2">
-          <div className="mb-8">
+          <div className="mb-4 md:mb-8">
             <h3 className="text-2xl font-bold mb-2">Send Me a Message</h3>
             <p className="text-neutral-400">
               I&apos;ll get back to you as soon as possible
@@ -256,7 +258,7 @@ export default function Contact() {
         <div className="space-y-8">
           {/* Social Links */}
           <div className="p-4 md:p-8 bg-white/5 border border-white/10 rounded-2xl h-full">
-            <h3 className="text-xl font-bold mb-6">Connect With Me</h3>
+            <h3 className="text-xl font-bold mb-4 md:mb-6">Connect With Me</h3>
             <div className="space-y-4">
               {socialLinks.map((link, i) => (
                 <a
@@ -280,7 +282,7 @@ export default function Contact() {
                 </a>
               ))}
             </div>
-            <div className="text-center mt-8 pt-8 border-t border-white/10">
+            <div className="text-center md:mt-8 md:pt-8 mt-4 pt-4 border-t border-white/10">
               <p className="text-neutral-400 text-sm">
                 Looking forward to hearing from you!
               </p>
