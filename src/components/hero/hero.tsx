@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
 
-import ExploreBtn from "./explore-btn";
+import GlowingBtn from "../ui/glowing-btn";
 import { Spotlight } from "../ui/spotlight";
 import Intro from "./intro";
 import Welcome from "./welcome";
@@ -20,7 +20,8 @@ export default function Hero() {
       <div className="relative z-10 mx-auto w-full max-w-7xl p-4 pt-20 md:pt-0">
         <Welcome />
         <Intro />
-        <ExploreBtn />
+        <div className="h-12"></div>
+        <GlowingBtn text="Let's Explore" href="#overview" />
       </div>
     </div>
   );
