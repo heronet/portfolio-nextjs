@@ -13,6 +13,8 @@ const experiences = [
         title:
           "Research Assistant - Department of Electrical and Electronic Engineering",
         period: "Mar. 2025 - Present",
+        type: "Full-time",
+        location: "On-site",
         details: [
           "Developing smart relay control systems for government cost optimization in collaboration with EE faculty.",
           "Research focuses on IoT-enabled power management systems using STM32 and ESP32 microcontrollers.",
@@ -41,15 +43,19 @@ const experiences = [
       {
         title: "Software Engineer",
         period: "Jun. 2024 - Jun. 2025",
+        type: "Full-time",
+        location: "Remote",
         details: [
-          "Led the frontend development of Opedemy, an AI-focused education technology platform.",
-          "Handled the full-stack development of Teachers Today, a tuition matching platform.",
-          "Interviewed candidates for fellow engineering roles.",
+          "Led full-stack development for educational platforms including Teachers Today (Next.js + Express.js)",
+          "Developed Opedemy learning platform with 200+ API integrations and optimized SSR for 50% faster load times",
+          "Conducted technical interviews for engineering positions",
         ],
       },
       {
         title: "Software Engineer, Intern",
         period: "Feb. 2024 - Jun. 2024",
+        type: "Part-time",
+        location: "Remote",
         details: [
           "Developed an AI marketing tool with interactive graphs, deep data exploration, and integration with Facebook Graph API.",
           "Built a Mobile CRM app using Flutter for the Job matching company MyJobs (1000+ customers).",
@@ -76,15 +82,24 @@ const experiences = [
       {
         title: "IT Secretary",
         period: "Nov. 2024 - Present",
+        type: "Full-time",
+        location: "On-site",
         details: [
-          "Organized the in-person member recruitment event in 2024 as a member of the organizing committee.",
-          "Created the online recruitment form and user management system.",
+          "Built the new official website from ground up using modern technologies like NextJS + Typescript",
+          "IT coordinator and Scientific Organizing Committee member of CAM-SUST Summer School on Astronomy 2025",
+          "Organized in-person recruitment events and coordinated technical workshops",
         ],
       },
       {
         title: "Assistant IT Secretary",
         period: "Apr. 2024 - Nov. 2024",
-        details: ["Created tutorials on Python for beginners."],
+        type: "Full-time",
+        location: "On-site",
+        details: [
+          "Managed and maintained the old Wordpress website, configuring packages for various functionalities",
+          "Developed educational content and Python programming tutorials for 200+ students",
+          "Handled content publishing on the website including blogs, and magazine",
+        ],
       },
     ],
     technologies: ["SvelteKit", "Typescript", "Google Sheets API", "Wordpress"],
@@ -100,72 +115,127 @@ export default function Experience() {
           subtitle="Companies and organizations I have worked with"
         />
 
-        <div className="mt-16 space-y-8">
-          {experiences.map((exp, i) => (
+        <div className="mt-16 space-y-10">
+          {experiences.map((exp, expIndex) => (
             <div
-              key={i}
-              className="group relative bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-6 hover:bg-gray-900/70 transition-all duration-300 hover:border-gray-600/50"
+              key={expIndex}
+              className="bg-gray-900/30 border border-gray-800/50 rounded-lg p-6 hover:bg-gray-900/40 transition-colors duration-200"
             >
-              <div className="flex flex-col lg:flex-row lg:items-start gap-6">
-                {/* Company Logo */}
-                <div className="shrink-0">
-                  <div className="relative w-16 h-16 rounded-xl bg-gradient-to-br from-indigo-500/20 to-purple-600/20 p-0.5">
-                    <div className="w-full h-full bg-gray-900 rounded-xl p-2 flex items-center justify-center">
-                      <Image
-                        src={exp.logo}
-                        alt={exp.company}
-                        className="w-10 h-10 object-contain"
-                      />
-                    </div>
-                  </div>
+              {/* Company Header */}
+              <div className="flex items-start gap-4 mb-6">
+                <div className="w-14 h-14 bg-gray-900 border border-gray-800 rounded-lg p-2 flex items-center justify-center flex-shrink-0">
+                  <Image
+                    src={exp.logo}
+                    alt={exp.company}
+                    className="w-8 h-8 object-contain"
+                  />
                 </div>
-
-                {/* Company Info */}
-                <div className="flex-1 min-w-0">
-                  <h3 className="text-xl font-semibold text-white mb-6">
+                <div className="flex-1">
+                  <h3 className="text-xl font-semibold text-white mb-1">
                     {exp.company}
                   </h3>
+                  <p className="text-gray-400 text-sm">
+                    {exp.roles.length > 1
+                      ? `${exp.roles.length} positions`
+                      : "1 position"}
+                  </p>
+                </div>
+              </div>
 
-                  {/* Roles */}
-                  <div className="space-y-6">
-                    {exp.roles.map((role, j) => (
-                      <div key={j} className="relative">
-                        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
-                          <h4 className="text-lg font-medium text-indigo-300">
-                            {role.title}
-                          </h4>
-                          <span className="text-sm text-gray-400 bg-gray-800/50 px-3 py-1 rounded-full w-fit">
-                            {role.period}
-                          </span>
-                        </div>
+              {/* Roles Timeline */}
+              {exp.roles.length === 1 ? (
+                // Single role - no timeline needed
+                <div className="ml-4">
+                  <div className="mb-3">
+                    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-1 max-md:mb-3">
+                      <h4 className="text-lg font-medium text-white">
+                        {exp.roles[0].title}
+                      </h4>
+                      <span className="text-sm text-gray-400 bg-gray-800/50 px-3 py-1 rounded-md w-fit">
+                        {exp.roles[0].period}
+                      </span>
+                    </div>
+                    <p className="text-gray-400 text-sm">
+                      {exp.roles[0].type}{" "}
+                      {exp.roles[0].location && `- ${exp.roles[0].location}`}
+                    </p>
+                  </div>
 
-                        <ul className="space-y-2 text-gray-300">
-                          {role.details.map((detail, index) => (
-                            <li key={index} className="flex items-start gap-3">
-                              <span className="w-1.5 h-1.5 bg-indigo-400 rounded-full mt-2 shrink-0"></span>
-                              <span className="text-sm leading-relaxed">
-                                {detail}
+                  {/* Role Details */}
+                  <ul className="space-y-2 mb-4">
+                    {exp.roles[0].details.map((detail, detailIndex) => (
+                      <li
+                        key={detailIndex}
+                        className="flex items-start gap-3 text-gray-400 text-sm leading-relaxed"
+                      >
+                        <span className="w-1 h-1 bg-gray-500 rounded-full mt-2 flex-shrink-0"></span>
+                        {detail}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ) : (
+                // Multiple roles - show timeline
+                <div className="ml-4 relative">
+                  <div className="space-y-8">
+                    {exp.roles.map((role, roleIndex) => (
+                      <div key={roleIndex} className="relative">
+                        {/* Timeline line segments - only between dots */}
+                        {roleIndex < exp.roles.length - 1 && (
+                          <div className="absolute left-[5px] top-[20px] w-0.5 bg-gray-800 h-[calc(100%+20px)]"></div>
+                        )}
+
+                        {/* Timeline dot */}
+                        <div className="absolute left-0 top-2 w-3 h-3 bg-gray-700 border-2 border-gray-900 rounded-full z-10"></div>
+
+                        {/* Role Content */}
+                        <div className="ml-8">
+                          {/* Role Header */}
+                          <div className="mb-3">
+                            <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-1 max-md:mb-3">
+                              <h4 className="text-lg font-medium text-white">
+                                {role.title}
+                              </h4>
+                              <span className="text-sm text-gray-400 bg-gray-800/50 px-3 py-1 rounded-md w-fit">
+                                {role.period}
                               </span>
-                            </li>
-                          ))}
-                        </ul>
+                            </div>
+                            <p className="text-gray-400 text-sm">
+                              {role.type}{" "}
+                              {role.location && `- ${role.location}`}
+                            </p>
+                          </div>
+
+                          {/* Role Details */}
+                          <ul className="space-y-2">
+                            {role.details.map((detail, detailIndex) => (
+                              <li
+                                key={detailIndex}
+                                className="flex items-start gap-3 text-gray-400 text-sm leading-relaxed"
+                              >
+                                <span className="w-1 h-1 bg-gray-500 rounded-full mt-2 flex-shrink-0"></span>
+                                {detail}
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
                       </div>
                     ))}
                   </div>
+                </div>
+              )}
 
-                  {/* Technologies */}
-                  <div className="mt-6 pt-6 border-t border-gray-700/50">
-                    <div className="flex flex-wrap gap-2">
-                      {exp.technologies.map((tech, index) => (
-                        <span
-                          key={index}
-                          className="px-3 py-1 text-xs font-medium bg-gray-800/50 text-gray-300 rounded-full border border-gray-700/50 hover:bg-gray-700/50 transition-colors duration-200"
-                        >
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
+              {/* Technologies */}
+              <div className="mt-6 pt-6 border-t border-gray-800/50 ml-4">
+                <div className="flex flex-wrap gap-2">
+                  {exp.technologies.map((tech, techIndex) => (
+                    <span
+                      key={techIndex}
+                      className="px-2.5 py-1 text-xs text-gray-400 bg-gray-800/30 border border-gray-800/50 rounded-md hover:bg-gray-800/50 hover:text-gray-300 transition-colors duration-200"
+                    >
+                      {tech}
+                    </span>
+                  ))}
                 </div>
               </div>
             </div>
