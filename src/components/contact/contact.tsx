@@ -103,19 +103,19 @@ export default function Contact() {
   const resumeLinks = [
     {
       href: "/resume_ee.pdf",
-      filename: "Resume - Sirat.pdf",
+      filename: "Resume (EE) - Sirat.pdf",
       label: "Resume (EE)",
       description: "Electrical Engineering focused",
     },
     {
       href: "/resume_cs.pdf",
-      filename: "Resume - Sirat.pdf",
+      filename: "Resume (CS) - Sirat.pdf",
       label: "Resume (CS)",
       description: "Computer Science focused",
     },
     {
       href: "/cv.pdf",
-      filename: "CV - Sirat.pdf",
+      filename: "CV (EECS) - Sirat.pdf",
       label: "CV (EECS)",
       description: "Comprehensive academic CV",
     },

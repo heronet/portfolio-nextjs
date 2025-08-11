@@ -1,9 +1,39 @@
 import hackules from "@/assets/experience/hackules.png";
 import cam from "@/assets/experience/cam.png";
+import sust from "@/assets/experience/sust.png";
 import Image from "next/image";
 import SectionHeader from "../common/section-header";
 
 const experiences = [
+  {
+    company: "Shahjalal University of Science and Technology",
+    logo: sust,
+    roles: [
+      {
+        title:
+          "Research Assistant - Department of Electrical and Electronic Engineering",
+        period: "Mar. 2025 - Present",
+        details: [
+          "Developing smart relay control systems for government cost optimization in collaboration with EE faculty.",
+          "Research focuses on IoT-enabled power management systems using STM32 and ESP32 microcontrollers.",
+          "Implementing MQTT-based data acquisition systems for real-time monitoring and control.",
+          "Conducting radar-based occupancy detection research for automated energy optimization in government buildings.",
+          "Developing RFID-based attendance management systems for rural educational institutions in Bangladesh.",
+        ],
+      },
+    ],
+    technologies: [
+      "STM32",
+      "ESP32",
+      "Embedded C",
+      "MQTT",
+      "Power Electronics",
+      "Smart Relays",
+      "IoT Protocols",
+      "RD-03D Radar",
+      "RFID Modules",
+    ],
+  },
   {
     company: "Hackules Inc.",
     logo: hackules,
