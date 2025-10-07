@@ -8,6 +8,9 @@ import Navbar from "@/components/navbar/navbar";
 import Overview from "@/components/overview/overview";
 import WebProjects from "@/components/projects/web/webprojects";
 import EmbeddedProjects from "@/components/projects/embedded/embeddedprojects";
+import Research from "@/components/research/research";
+import OpenSource from "@/components/opensource/opensource";
+import Skills from "@/components/skills/skills";
 import Recommendations from "@/components/recommendations/recommendations";
 
 export default function Home() {
@@ -17,8 +20,11 @@ export default function Home() {
       <Hero />
       <Overview />
       <Experience />
+      <Research />
+      <OpenSource />
       <EmbeddedProjects />
       <WebProjects />
+      <Skills />
       <Education />
       <Awards />
       <Recommendations />
