@@ -45,6 +45,8 @@ export default function OpenSource() {
             "Added STM32WB55 dual-core (Cortex-M4 + M0+) board support with USART console, DFU flashing, SWD debugging, and verified Bluetooth HCI Layer wireless coprocessor compatibility.",
           prNumber: "#97435",
           prUrl: "https://github.com/zephyrproject-rtos/zephyr/pull/97435",
+          docsUrl:
+            "https://docs.zephyrproject.org/latest/boards/weact/stm32wb55_core/doc/index.html",
           status: "Merged",
         },
         {
