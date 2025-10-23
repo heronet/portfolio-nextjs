@@ -45,10 +45,10 @@ export default function Overview() {
         <OSS
           projectName="zephyrproject-rtos/zephyr"
           technologies={["Kconfig", "Devicetree", "C", "ARM Cortex-M4"]}
-          contributionType="Pull Request Merged"
-          description="boards: arm: Adds support for the WeAct STM32F446 development board with STM32F446RET6 MCU to ZephyrRTOS"
-          prNumbers="PR #91886"
-          releaseVersion="v4.2.0"
+          contributionType="PR Merged"
+          description="drivers: auxdisplay: Add TM1637 7-segment display driver to official auxdisplay subsystem of ZephyrRTOS"
+          prNumbers="PR #96510"
+          releaseVersion="v4.3.0"
           githubUrl="https://github.com/zephyrproject-rtos/zephyr/pull/91886"
         />
       ),
@@ -58,8 +58,8 @@ export default function Overview() {
       content: (
         <OpenSourceMetrics
           contributions={[
-            { count: "4+", label: "Merged PRs", project: "Zephyr RTOS" },
-            { count: "1000+", label: "Developers Served", project: "Globally" },
+            { count: "11+", label: "Merged PRs", project: "Zephyr RTOS" },
+            { count: "5000+", label: "Developers Served", project: "Globally" },
             { count: "2", label: "ESP-IDF Components", project: "Published" },
           ]}
           highlight="Linux Foundation Zephyr contributor"
