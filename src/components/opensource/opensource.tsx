@@ -14,7 +14,7 @@ export default function OpenSource() {
       project: "Zephyr RTOS",
       organization: "Linux Foundation",
       impact: "merged PRs serving 5000+ embedded developers globally",
-      fallbackCount: 11,
+      fallbackCount: 13,
       viewAllUrl: "https://github.com/zephyrproject-rtos/zephyr/pulls/heronet",
       viewAllLabel: "View All PRs",
       githubRepo: "zephyrproject-rtos/zephyr",
