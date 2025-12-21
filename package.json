@@ -21,7 +21,7 @@
     "clsx": "^2.1.1",
     "dotted-map": "^2.2.3",
     "motion": "^12.6.2",
-    "next": "16.0.8",
+    "next": "16.0.10",
     "react": "^19.2.1",
     "react-dom": "^19.2.1",
     "tailwind-merge": "^3.0.2",

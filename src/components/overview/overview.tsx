@@ -31,8 +31,8 @@ export default function Overview() {
           contribution={{
             project: "Linux Foundation Zephyr RTOS",
             description:
-              "4+ merged PRs (6 commits) - Board support, driver development, & tooling improvements",
-            url: "https://github.com/zephyrproject-rtos/zephyr/pull/91886",
+              "15+ merged PRs - Board support, driver development, & tooling improvements",
+            url: "https://github.com/zephyrproject-rtos/zephyr/pulls?q=is%3Apr+author%3Aheronet",
           }}
         />
       ),
@@ -58,7 +58,7 @@ export default function Overview() {
       content: (
         <OpenSourceMetrics
           contributions={[
-            { count: "11+", label: "Merged PRs", project: "Zephyr RTOS" },
+            { count: "15+", label: "Merged PRs", project: "Zephyr RTOS" },
             { count: "5000+", label: "Developers Served", project: "Globally" },
             { count: "2", label: "ESP-IDF Components", project: "Published" },
           ]}
