@@ -1,7 +1,7 @@
 import Image from "next/image";
-import React from "react";
 import { Timeline } from "@/components/ui/timeline";
 import zephyr from "@/assets/certs/zephyr.png";
+import maintainer from "@/assets/certs/maintainer.png";
 import upc from "@/assets/certs/upc.jpeg";
 import cs50x from "@/assets/certs/cs50x.png";
 import ndc from "@/assets/certs/ndc.jpeg";
@@ -12,6 +12,49 @@ import SectionHeader from "../common/section-header";
 
 export default function Awards() {
   const data = [
+    {
+      title: "2026",
+      content: (
+        <div>
+          <p className="text-neutral-200 text-xs md:text-sm font-normal mb-8">
+            Zephyr RTOS Maintainer
+          </p>
+          <div className="flex flex-col gap-4">
+            <p className="max-w-xl">
+              Promoted to{" "}
+              <span className="text-purple-400 font-bold">
+                subsystem maintainer
+              </span>{" "}
+              for the{" "}
+              <a
+                href="https://github.com/zephyrproject-rtos/zephyr/pull/100139"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-400 underline"
+              >
+                Zephyr RTOS project
+              </a>{" "}
+              after authoring the biometrics subsystem (PR #100139), the first
+              biometric authentication framework in the RTOS. Earned the{" "}
+              <a
+                href="https://www.credly.com/badges/f9c1429d-66fc-4437-b363-b82b4bc39114"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-400 underline"
+              >
+                Zephyr Maintainer badge
+              </a>{" "}
+              from The Linux Foundation.
+            </p>
+            <Image
+              src={maintainer}
+              alt="Zephyr RTOS Maintainer Badge"
+              className="rounded-lg object-cover max-w-xl w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+            />
+          </div>
+        </div>
+      ),
+    },
     {
       title: "2025",
       content: (

@@ -27,11 +27,11 @@ export default function Overview() {
           protocols={["I2C", "SPI", "UART", "MQTT", "BLE", "WiFi", "LoRa"]}
           tools={["STM32CubeIDE", "PlatformIO", "KiCAD", "ROS2", "CMake"]}
           specialization="IoT & Real-time Systems"
-          experience="Official Zephyr RTOS Contributor"
+          experience="Zephyr RTOS Maintainer"
           contribution={{
             project: "Linux Foundation Zephyr RTOS",
             description:
-              "15+ merged PRs - Board support, driver development, & tooling improvements",
+              "Biometrics Subsystem Maintainer - Authored first biometric authentication framework for Zephyr RTOS",
             url: "https://github.com/zephyrproject-rtos/zephyr/pulls?q=is%3Apr+author%3Aheronet",
           }}
         />
@@ -44,12 +44,17 @@ export default function Overview() {
       content: (
         <OSS
           projectName="zephyrproject-rtos/zephyr"
-          technologies={["Kconfig", "Devicetree", "C", "ARM Cortex-M4"]}
+          technologies={[
+            "C",
+            "Kconfig",
+            "Devicetree",
+            "Subsystem Architecture",
+          ]}
           contributionType="PR Merged"
-          description="drivers: auxdisplay: Add TM1637 7-segment display driver to official auxdisplay subsystem of ZephyrRTOS"
-          prNumbers="PR #96510"
-          releaseVersion="v4.3.0"
-          githubUrl="https://github.com/zephyrproject-rtos/zephyr/pull/91886"
+          description="RFC: drivers: biometrics: Add driver subsystem, GT5x, and ZFM-X0 fingerprint sensor drivers"
+          prNumbers="PR #100139"
+          releaseVersion="v4.4.0"
+          githubUrl="https://github.com/zephyrproject-rtos/zephyr/pull/100139"
         />
       ),
       col: 2,
@@ -62,8 +67,8 @@ export default function Overview() {
             { count: "5000+", label: "Developers Served", project: "Globally" },
             { count: "2", label: "ESP-IDF Components", project: "Published" },
           ]}
-          highlight="Linux Foundation Zephyr contributor"
-          badgeUrl="https://www.credly.com/badges/112ed413-27ce-4960-a965-ad2df01b8b65"
+          highlight="Zephyr RTOS Maintainer"
+          badgeUrl="https://www.credly.com/badges/f9c1429d-66fc-4437-b363-b82b4bc39114"
         />
       ),
       col: 1,
@@ -169,8 +174,8 @@ export default function Overview() {
                 item.col === 3
                   ? "md:col-span-3"
                   : item.col === 2
-                  ? "md:col-span-2"
-                  : "md:col-span-1"
+                    ? "md:col-span-2"
+                    : "md:col-span-1"
               }`}
             />
           ))}

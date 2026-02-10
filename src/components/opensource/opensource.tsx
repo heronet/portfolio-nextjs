@@ -20,6 +20,16 @@ export default function OpenSource() {
       githubRepo: "zephyrproject-rtos/zephyr",
       contributions: [
         {
+          title: "Subsystem Development - Biometrics Subsystem",
+          description:
+            "RFC: drivers: biometrics: Add driver subsystem, GT5x, and ZFM-X0 fingerprint sensor drivers - First biometric authentication framework in Zephyr RTOS with complete subsystem architecture, public API interfaces, and reference drivers for optical fingerprint sensors.",
+          prNumber: "#100139",
+          prUrl: "https://github.com/zephyrproject-rtos/zephyr/pull/100139",
+          docsUrl:
+            "https://docs.zephyrproject.org/latest/hardware/peripherals/biometrics/index.html",
+          status: "Merged",
+        },
+        {
           title: "Driver Development - HUB12 LED Matrix Display",
           description:
             "Added HUB12 interface driver for 32x16 monochrome LED matrix displays with SPI-based data transfer, configurable brightness, and thread-safe framebuffer access implementing standard Zephyr display API.",
@@ -153,7 +163,7 @@ export default function OpenSource() {
         className={cn(
           "absolute inset-0",
           "[background-size:20px_20px]",
-          "[background-image:radial-gradient(#404040_1px,transparent_1px)]"
+          "[background-image:radial-gradient(#404040_1px,transparent_1px)]",
         )}
       />
       <div className="pointer-events-none absolute inset-0 flex items-center justify-center [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] bg-background"></div>

@@ -1,10 +1,53 @@
 import hackules from "@/assets/experience/hackules.png";
 import cam from "@/assets/experience/cam.png";
 import sust from "@/assets/experience/sust.png";
+import lf from "@/assets/experience/lf.png";
 import Image from "next/image";
 import SectionHeader from "../common/section-header";
 
 const experiences = [
+  {
+    company: "Linux Foundation - Zephyr RTOS Project",
+    logo: lf,
+    roles: [
+      {
+        title: "Biometrics Subsystem Maintainer, Zephyr Maintainers Team",
+        period: "Feb. 2026 - Present",
+        type: "Full-time",
+        location: "Remote",
+        details: [
+          "Promoted to subsystem maintainer after authoring Zephyr's biometrics subsystem (PR #100139), the first biometric authentication framework in the RTOS, enabling fingerprint-based security for embedded applications",
+          "Designed complete subsystem architecture including public API interfaces, device abstractions, driver framework, and Kconfig integration for biometric sensors",
+          "Implemented reference drivers for ZFM-x0 & GT-5x optical fingerprint sensors with enrollment, verification, and template management",
+          "Establish technical standards and review all community contributions to the biometrics subsystem",
+        ],
+      },
+      {
+        title: "Contributor (Triage), Zephyr Contributors Team",
+        period: "Jun. 2025 - Present",
+        type: "Full-time",
+        location: "Remote",
+        details: [
+          "Accepted into official Zephyr Contributors Team following 15+ merged PRs expanding hardware ecosystem across ARM, RISC-V, and Xtensa platforms",
+          "Develop device drivers and board support packages serving 5000+ embedded developers globally",
+          "Review community contributions and provide technical guidance on driver architecture and device tree bindings",
+          "Maintain official documentation for display subsystems and 9+ board support packages in Zephyr upstream",
+        ],
+      },
+    ],
+    technologies: [
+      "Zephyr RTOS",
+      "Embedded C",
+      "Subsystem Architecture",
+      "Device Drivers",
+      "Device Tree",
+      "Git",
+      "ARM",
+      "RISC-V",
+      "Xtensa",
+      "Kconfig",
+    ],
+  },
   {
     company: "Shahjalal University of Science and Technology",
     logo: sust,
