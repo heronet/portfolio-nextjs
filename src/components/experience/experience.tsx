@@ -28,7 +28,7 @@ const experiences = [
         type: "Full-time",
         location: "Remote",
         details: [
-          "Accepted into official Zephyr Contributors Team following 15+ merged PRs expanding hardware ecosystem across ARM, RISC-V, and Xtensa platforms",
+          "Accepted into official Zephyr Contributors Team following 17 merged PRs expanding hardware ecosystem across ARM, RISC-V, and Xtensa platforms",
           "Develop device drivers and board support packages serving 5000+ embedded developers globally",
           "Review community contributions and provide technical guidance on driver architecture and device tree bindings",
           "Maintain official documentation for display subsystems and 9+ board support packages in Zephyr upstream",

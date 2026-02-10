@@ -63,7 +63,7 @@ export default function Overview() {
       content: (
         <OpenSourceMetrics
           contributions={[
-            { count: "15+", label: "Merged PRs", project: "Zephyr RTOS" },
+            { count: "17", label: "Merged PRs", project: "Zephyr RTOS" },
             { count: "5000+", label: "Developers Served", project: "Globally" },
             { count: "2", label: "ESP-IDF Components", project: "Published" },
           ]}
