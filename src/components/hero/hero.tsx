@@ -11,7 +11,7 @@ export default function Hero() {
       <div
         className={cn(
           "pointer-events-none absolute inset-0 [background-size:40px_40px] select-none",
-          "[background-image:linear-gradient(to_right,#171717_1px,transparent_1px),linear-gradient(to_bottom,#171717_1px,transparent_1px)]"
+          "[background-image:linear-gradient(to_right,#171717_1px,transparent_1px),linear-gradient(to_bottom,#171717_1px,transparent_1px)]",
         )}
       />
       <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-background [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] "></div>
@@ -21,7 +21,11 @@ export default function Hero() {
         <Welcome />
         <Intro />
         <div className="h-12"></div>
-        <GlowingBtn text="Let's Explore" href="#overview" />
+
+        <div className="flex flex-row gap-3 mx-auto w-full justify-center flex-1">
+          <GlowingBtn text="Download Resume" href="/resume_ee.pdf" download />
+          <GlowingBtn text="Explore" href="#overview" />
+        </div>
       </div>
     </div>
   );

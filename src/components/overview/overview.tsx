@@ -1,7 +1,4 @@
 import { BentoGrid, BentoGridItem } from "../ui/bento-grid";
-import { FrontendStack } from "./items/frontend";
-import { BackendStack } from "./items/backend";
-import { MobileStack } from "./items/mobile";
 import { OSS } from "./items/oss";
 import { EmbeddedStack } from "./items/embedded";
 import { ArchLinuxContent } from "./items/arch";
@@ -45,16 +42,18 @@ export default function Overview() {
         <OSS
           projectName="zephyrproject-rtos/zephyr"
           technologies={[
-            "C",
             "Kconfig",
             "Devicetree",
-            "Subsystem Architecture",
+            "OS Architecture",
+            "PSA Crypto",
+            "FIDO2/CTAP2",
+            "USB",
           ]}
           contributionType="PR Merged"
-          description="RFC: drivers: biometrics: Add driver subsystem, GT5x, and ZFM-X0 fingerprint sensor drivers"
-          prNumbers="PR #100139"
-          releaseVersion="v4.4.0"
-          githubUrl="https://github.com/zephyrproject-rtos/zephyr/pull/100139"
+          description="RFC: fido2: add FIDO2/CTAP2 authenticator subsystem"
+          prNumbers="PR #104327"
+          releaseVersion="v4.5.0"
+          githubUrl="https://github.com/zephyrproject-rtos/zephyr/pull/104327/"
         />
       ),
       col: 2,
@@ -63,9 +62,17 @@ export default function Overview() {
       content: (
         <OpenSourceMetrics
           contributions={[
-            { count: "17", label: "Merged PRs", project: "Zephyr RTOS" },
-            { count: "5000+", label: "Developers Served", project: "Globally" },
-            { count: "2", label: "ESP-IDF Components", project: "Published" },
+            { count: "20+", label: "Merged PRs", project: "Zephyr RTOS" },
+            {
+              count: "10000+",
+              label: "Developers Served",
+              project: "Globally",
+            },
+            {
+              count: "2",
+              label: "Drivers Maintained",
+              project: "Linux IIO",
+            },
           ]}
           highlight="Zephyr RTOS Maintainer"
           badgeUrl="https://www.credly.com/badges/f9c1429d-66fc-4437-b363-b82b4bc39114"
@@ -73,24 +80,24 @@ export default function Overview() {
       ),
       col: 1,
     },
-    {
-      title: "Frontend Stack",
-      description: "Modern web development tools",
-      content: <FrontendStack />,
-      col: 1,
-    },
-    {
-      title: "Backend Stack",
-      description: "Server-side technologies",
-      content: <BackendStack />,
-      col: 1,
-    },
-    {
-      title: "Mobile Development",
-      description: "Cross-platform mobile apps",
-      content: <MobileStack />,
-      col: 1,
-    },
+    // {
+    //   title: "Frontend Stack",
+    //   description: "Modern web development tools",
+    //   content: <FrontendStack />,
+    //   col: 1,
+    // },
+    // {
+    //   title: "Backend Stack",
+    //   description: "Server-side technologies",
+    //   content: <BackendStack />,
+    //   col: 1,
+    // },
+    // {
+    //   title: "Mobile Development",
+    //   description: "Cross-platform mobile apps",
+    //   content: <MobileStack />,
+    //   col: 1,
+    // },
     {
       content: (
         <PhysicsContent
@@ -107,15 +114,16 @@ export default function Overview() {
       content: (
         <ResearchHighlight
           currentProjects={3}
-          publications={1}
-          highlight="Radar-based Occupancy Detection"
-          description="Government office energy management using mmWave radar and IoT automation"
-          award="Bronze Medal - University Physics Competition 2024"
+          publications={0}
+          highlight="OS Architecture, Security, and Sensors"
+          description="Embedded RTOS Design, OS Architecture, Security and Authentication"
+          // award="Bronze Medal - University Physics Competition 2024"
           researchAreas={[
-            "IoT Automation",
-            "IoT in Education",
+            "OS Architecture",
+            "Firmware Development",
             "Energy Systems",
-            "Autonomous Vehicles",
+            "Security",
+            "Accessible Hardware",
           ]}
         />
       ),
@@ -125,7 +133,7 @@ export default function Overview() {
     {
       content: (
         <AstronomyContent
-          role="IT Secretary"
+          role="Assistant General Secretary"
           organization="Copernicus Astronomical Memorial of SUST"
           period="Nov 2024 - Present"
           responsibilities={[

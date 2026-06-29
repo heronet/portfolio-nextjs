@@ -34,7 +34,7 @@ export default function EmbeddedProjects() {
       liveUrl: undefined,
       image: autonomouscar,
       category: "Research" as const,
-      status: "Ongoing" as const,
+      status: "On Hold" as const,
       year: "2025",
       impact: "Faculty-funded autonomous vehicle research project",
     },
@@ -213,7 +213,7 @@ export default function EmbeddedProjects() {
         className={cn(
           "absolute inset-0",
           "[background-size:20px_20px]",
-          "[background-image:radial-gradient(#404040_1px,transparent_1px)]"
+          "[background-image:radial-gradient(#404040_1px,transparent_1px)]",
         )}
       />
       <div className="pointer-events-none absolute inset-0 flex items-center justify-center [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] bg-background"></div>

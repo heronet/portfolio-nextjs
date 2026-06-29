@@ -8,7 +8,7 @@ export default function Intro() {
                   Bringing ideas into reality <br /> with quality code.
                 </h1> */}
       <h1 className="relative z-10 mx-auto max-w-4xl text-center text-4xl font-bold   md:text-7xl text-slate-300">
-        {"Bringing ideas into reality with quality code"
+        {"Trying to solve real-world Embedded Systems."
           .split(" ")
           .map((word, index) => (
             <motion.span
@@ -39,8 +39,7 @@ export default function Intro() {
         }}
         className="relative z-10 mx-auto max-w-xl  py-4 text-center text-lg font-normal text-neutral-400"
       >
-        I&apos;m Sirat, a Software Engineer specializing in full-stack web
-        development and Embedded Systems.
+        I&apos;m Sirat, and I work with Embedded Systems and Operating Systems.
       </motion.p>
     </div>
   );

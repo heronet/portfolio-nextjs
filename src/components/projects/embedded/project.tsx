@@ -32,7 +32,7 @@ interface ProjectProps {
       | "Personal"
       | "Professional"
       | "Faculty";
-    status?: "Published" | "Ongoing" | "Completed";
+    status?: "Published" | "Ongoing" | "Completed" | "On Hold";
     year: string;
     impact?: string;
   };
@@ -132,7 +132,7 @@ const Project = ({ project }: ProjectProps) => {
               <div
                 className={cn(
                   "flex items-center gap-2 px-3 py-1.5 backdrop-blur-sm border rounded-full text-xs font-medium",
-                  `bg-gradient-to-r ${getCategoryStyle(project.category)}`
+                  `bg-gradient-to-r ${getCategoryStyle(project.category)}`,
                 )}
               >
                 {getCategoryIcon(project.category)}
@@ -142,7 +142,7 @@ const Project = ({ project }: ProjectProps) => {
                 <div
                   className={cn(
                     "flex items-center gap-1.5 px-3 py-1.5 backdrop-blur-sm border rounded-full text-xs font-medium",
-                    `bg-gradient-to-r ${getStatusStyle(project.status)}`
+                    `bg-gradient-to-r ${getStatusStyle(project.status)}`,
                   )}
                 >
                   {project.status}
@@ -229,8 +229,8 @@ const Project = ({ project }: ProjectProps) => {
                   "flex items-center flex-1 gap-2 px-4 py-2 rounded-lg border transition-all duration-200 text-sm font-medium group/btn",
                   "hover:border-white/[0.12] border-white/[0.08]",
                   `bg-gradient-to-r ${getCategoryStyle(
-                    project.category
-                  )} text-inherit`
+                    project.category,
+                  )} text-inherit`,
                 )}
               >
                 <IconExternalLink className="w-4 h-4" />

@@ -13,12 +13,23 @@ export default function OpenSource() {
     {
       project: "Zephyr RTOS",
       organization: "Linux Foundation",
-      impact: "merged PRs serving 5000+ embedded developers globally",
-      fallbackCount: 13,
+      impact: "merged PRs serving thousands embedded developers globally",
+      fallbackCount: 20,
       viewAllUrl: "https://github.com/zephyrproject-rtos/zephyr/pulls/heronet",
       viewAllLabel: "View All PRs",
       githubRepo: "zephyrproject-rtos/zephyr",
       contributions: [
+        {
+          title:
+            "Subsystem Development - FIDO2 Subsystem & Authentication Subsystem",
+          description:
+            "RFC: fido2: add FIDO2/CTAP2 authenticator subsystem - The built-in FIDO2 implementation for Zephyr.",
+          prNumber: "#104327",
+          prUrl: "https://github.com/zephyrproject-rtos/zephyr/pull/104327",
+          docsUrl:
+            "https://docs.zephyrproject.org/latest/services/authentication/fido2/index.html",
+          status: "Merged",
+        },
         {
           title: "Subsystem Development - Biometrics Subsystem",
           description:
@@ -59,25 +70,32 @@ export default function OpenSource() {
             "https://docs.zephyrproject.org/latest/boards/weact/stm32wb55_core/doc/index.html",
           status: "Merged",
         },
+      ],
+    },
+    {
+      project: "The Linux Kernel",
+      organization: "Linux Foundation",
+      impact:
+        "Authored the drivers and Device Tree bindings and used latest Kernel APIs",
+      viewAllUrl:
+        "https://lore.kernel.org/linux-iio/?q=%28f%3Aemail%40sirat.me+OR+f%3Asiratul.islam%40linux.dev%29",
+      viewAllLabel: "lore.kernel.org",
+      contributions: [
         {
-          title: "Board Support - WeAct ESP32-S3-B",
+          title: "QST QMC5883L 3-Axis Magnetic Sensor",
           description:
-            "Added WeAct Studio ESP32-S3 board support with complete device tree, peripheral configuration, GPIO mappings, WiFi/BLE support, and flash configuration.",
-          prNumber: "#96687",
-          prUrl: "https://github.com/zephyrproject-rtos/zephyr/pull/96687",
-          docsUrl:
-            "https://docs.zephyrproject.org/latest/boards/weact/weact_esp32s3_b/doc/index.html",
-          status: "Merged",
+            "QST QMC5883L 3-Axis Magnetic Sensor driver. It is a simple device with minimal magnetometer functionalities. Commonly used as (software incompatible) replacement for the Honeywell HMC5883L sensor.",
+          loreUrl:
+            "https://lore.kernel.org/linux-iio/20260619104524.10172-1-siratul.islam@linux.dev/",
+          status: "Patch Accepted",
         },
         {
-          title: "Board Support - WeAct STM32F446RET6",
+          title: "STMicroelectronics VL53L1X Time-of-Flight ranging sensor",
           description:
-            "Complete board support with device tree, GPIO mappings, and peripheral initialization for STM32F446. Enables Zephyr RTOS compatibility for ARM Cortex-M4 development board.",
-          prNumber: "#91886",
-          prUrl: "https://github.com/zephyrproject-rtos/zephyr/pull/91886",
-          docsUrl:
-            "https://docs.zephyrproject.org/latest/boards/weact/stm32f446_core/doc/index.html",
-          status: "Merged",
+            "The VL53L1X is a ToF laser-ranging sensor with I2C interface, capable of measuring distances up to 4 meters. The driver supports both interrupt-driven and polled operation.",
+          loreUrl:
+            "https://lore.kernel.org/linux-iio/20260325202005.29822-1-email@sirat.me/",
+          status: "Patch Accepted",
         },
       ],
     },
@@ -122,7 +140,7 @@ export default function OpenSource() {
     {
       project: "svelte-cloudinary",
       organization: "Web Development Library",
-      impact: "Fixed critical bug affecting 800+ developers",
+      impact: "Fixed a bug affecting many developers",
       fallbackCount: 1,
       viewAllUrl:
         "https://github.com/cloudinary-community/svelte-cloudinary/pulls?q=is%3Apr+author%3Aheronet",
@@ -253,7 +271,8 @@ export default function OpenSource() {
                       <h4 className="text-base font-medium text-zinc-200">
                         {item.title}
                       </h4>
-                      {item.status === "Merged" ? (
+                      {item.status === "Merged" ||
+                      item.status == "Patch Accepted" ? (
                         <span className="px-2 py-0.5 text-xs rounded-full bg-purple-500/10 text-purple-400 border border-purple-500/20 shrink-0 inline-flex items-center gap-1.5">
                           <svg
                             className="w-3 h-3"
@@ -262,7 +281,7 @@ export default function OpenSource() {
                           >
                             <path d="M5 3.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm0 2.122a2.25 2.25 0 10-1.5 0v.878A2.25 2.25 0 005.75 8.5h1.5v2.128a2.251 2.251 0 101.5 0V8.5h1.5a2.25 2.25 0 002.25-2.25v-.878a2.25 2.25 0 10-1.5 0v.878a.75.75 0 01-.75.75h-4.5A.75.75 0 015 6.25v-.878zm3.75 7.378a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm3-8.75a.75.75 0 100-1.5.75.75 0 000 1.5z"></path>
                           </svg>
-                          Merged
+                          {item.status}
                         </span>
                       ) : (
                         <span className="px-2 py-0.5 text-xs rounded-full bg-green-500/10 text-green-400 border border-green-500/20 shrink-0">
@@ -285,6 +304,30 @@ export default function OpenSource() {
                         >
                           {item.prNumber && <span>{item.prNumber}</span>}
                           <span>View PR</span>
+                          <svg
+                            className="w-3 h-3"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                            />
+                          </svg>
+                        </a>
+                      )}
+                      {item.loreUrl && (
+                        <a
+                          href={item.loreUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1.5 text-xs text-blue-400 hover:text-blue-300 transition-colors"
+                        >
+                          {item.prNumber && <span>{item.prNumber}</span>}
+                          <span>lore.kernel.org</span>
                           <svg
                             className="w-3 h-3"
                             fill="none"

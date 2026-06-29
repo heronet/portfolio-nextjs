@@ -4,7 +4,7 @@ import SectionHeader from "../common/section-header";
 interface ResearchProject {
   title: string;
   description: string;
-  status: "Published" | "Ongoing";
+  status: "Published" | "Ongoing" | "On Hold";
   year: string;
   authors?: string;
   venue?: string;
@@ -15,22 +15,57 @@ interface ResearchProject {
 
 export default function Research() {
   const research: ResearchProject[] = [
+    // {
+    //   title:
+    //     "Air Evacuation Time for Holes of Variable Diameters in a Space Station",
+    //   description:
+    //     "Mathematical modeling of air leak in space stations using Poiseuille's law and Ideal Gas Law. Calculated evacuation times for various hole diameters under pressure differentials.",
+    //   status: "Published",
+    //   year: "2024",
+    //   authors: "Siratul Islam, Ibrahim Hossain, Rimon Acharjee Sumon",
+    //   venue: "University Physics Competition 2024 (Team 750, Problem A)",
+    //   link: "https://www.researchgate.net/publication/388081375_Air_evacuation_time_for_holes_of_variable_diameters_in_a_Space_Station_Team_750_Problem_A",
+    //   technologies: [
+    //     "Mathematical Modeling",
+    //     "Fluid Dynamics",
+    //     "Thermodynamics",
+    //   ],
+    //   impact: "Bronze Medal",
+    // },
     {
       title:
-        "Air Evacuation Time for Holes of Variable Diameters in a Space Station",
+        "FIDO2/CTAP2.1 on Zephyr RTOS: Design and Multi-Platform Evaluation of an Open-Source FIDO2 Authenticator",
       description:
-        "Mathematical modeling of air leak in space stations using Poiseuille's law and Ideal Gas Law. Calculated evacuation times for various hole diameters under pressure differentials.",
-      status: "Published",
-      year: "2024",
-      authors: "Siratul Islam, Ibrahim Hossain, Rimon Acharjee Sumon",
-      venue: "University Physics Competition 2024 (Team 750, Problem A)",
-      link: "https://www.researchgate.net/publication/388081375_Air_evacuation_time_for_holes_of_variable_diameters_in_a_Space_Station_Team_750_Problem_A",
+        "Accesible FIDO2 to any MCU, for use cases more that just a security key",
+      status: "Ongoing",
+      year: "2026",
       technologies: [
-        "Mathematical Modeling",
-        "Fluid Dynamics",
-        "Thermodynamics",
+        "FIDO2",
+        "Authenticaion",
+        "OS Architecture",
+        "USB",
+        "BLE",
+        "NFC",
+        "PSA Crypto",
+        "Secure Storage",
+        "TF-M",
       ],
-      impact: "Bronze Medal",
+      impact: "First FIDO2 subsystem in any RTOS",
+    },
+    {
+      title:
+        "BASE: A Multi-Modal Biometric Architecture for Resource-Constrained RTOS",
+      description:
+        "Standardize Biometrics sensors like Fingerprint, Face, and Palm into a common API driverclass",
+      status: "Ongoing",
+      year: "2026",
+      technologies: [
+        "Sensors",
+        "Fingerprint",
+        "Authenticaion",
+        "OS Architecture",
+      ],
+      impact: "Made Zephyr the first RTOS with such a subystem",
     },
     {
       title:
@@ -68,7 +103,7 @@ export default function Research() {
       title: "Autonomous Vehicle Navigation System",
       description:
         "Department-funded autonomous vehicle project implementing ROS2-based navigation with LiDAR sensor fusion, OpenCV computer vision, and STM32F4 vehicle control systems.",
-      status: "Ongoing",
+      status: "On Hold",
       year: "2025",
       technologies: [
         "Jetson Orin",
@@ -88,7 +123,7 @@ export default function Research() {
         className={cn(
           "absolute inset-0",
           "[background-size:20px_20px]",
-          "[background-image:radial-gradient(#404040_1px,transparent_1px)]"
+          "[background-image:radial-gradient(#404040_1px,transparent_1px)]",
         )}
       />
       <div className="pointer-events-none absolute inset-0 flex items-center justify-center [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] bg-background"></div>
@@ -118,7 +153,7 @@ export default function Research() {
                         "px-2 py-0.5 text-xs rounded-full",
                         project.status === "Published"
                           ? "bg-green-500/10 text-green-400 border border-green-500/20"
-                          : "bg-blue-500/10 text-blue-400 border border-blue-500/20"
+                          : "bg-blue-500/10 text-blue-400 border border-blue-500/20",
                       )}
                     >
                       {project.status}

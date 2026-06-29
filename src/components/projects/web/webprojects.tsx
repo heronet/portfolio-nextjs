@@ -100,7 +100,7 @@ export default function WebProjects() {
         className={cn(
           "absolute inset-0",
           "[background-size:20px_20px]",
-          "[background-image:radial-gradient(#404040_1px,transparent_1px)]"
+          "[background-image:radial-gradient(#404040_1px,transparent_1px)]",
         )}
       />
       {/* Radial gradient for the container to give a faded look */}
@@ -111,8 +111,8 @@ export default function WebProjects() {
       >
         <SectionHeader
           title="Web Projects"
-          subtitle="A mix of professional work and personal experiments—built to solve
-          real problems, streamline workflows, or just explore new tech."
+          subtitle="I don't do WebDev anymore. This section here is for archival only....A mix of professional work and personal experiments—built to solve
+          real problems, streamline workflows, or just explore new tech. "
         />
         <div className="flex flex-wrap justify-center w-full gap-6  z-20">
           {projects.map((project, i) => (

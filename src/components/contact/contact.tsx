@@ -22,7 +22,7 @@ export default function Contact() {
   });
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({
@@ -55,7 +55,7 @@ export default function Contact() {
           email: formData.email,
           message: formData.message,
         },
-        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY,
       );
 
       if (data.status === 200) {
@@ -113,12 +113,12 @@ export default function Contact() {
       label: "Resume (CS)",
       description: "Computer Science focused",
     },
-    {
-      href: "/cv.pdf",
-      filename: "CV (EECS) - Sirat.pdf",
-      label: "CV (EECS)",
-      description: "Comprehensive academic CV",
-    },
+    // {
+    //   href: "/cv.pdf",
+    //   filename: "CV (EECS) - Sirat.pdf",
+    //   label: "CV (EECS)",
+    //   description: "Comprehensive academic CV",
+    // },
   ];
 
   return (

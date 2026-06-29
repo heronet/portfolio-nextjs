@@ -3,7 +3,7 @@ interface ResearchHighlightProps {
   publications: number;
   highlight: string;
   description: string;
-  award: string;
+  // award: string;
   researchAreas: string[];
 }
 
@@ -12,7 +12,7 @@ export const ResearchHighlight: React.FC<ResearchHighlightProps> = ({
   publications,
   highlight,
   description,
-  award,
+  // award,
   researchAreas,
 }) => {
   return (
@@ -74,7 +74,7 @@ export const ResearchHighlight: React.FC<ResearchHighlightProps> = ({
         ))}
       </div>
 
-      <div className="mt-auto">
+      {/* <div className="mt-auto">
         <div className="bg-amber-900/20 border border-amber-700/30 rounded-md p-2">
           <div className="flex items-center gap-1.5">
             <svg
@@ -89,7 +89,7 @@ export const ResearchHighlight: React.FC<ResearchHighlightProps> = ({
             </span>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

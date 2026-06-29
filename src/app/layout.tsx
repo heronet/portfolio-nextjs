@@ -14,35 +14,34 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Siratul Islam | Software Engineer",
+  title: "Siratul Islam | Embedded Systems | Open Source",
   description:
-    "Siratul Islam | Software Engineer & Physics Student | Expert in SvelteKit, Next.js, Flutter & Full-Stack Development. Bronze Medalist at University Physics Competition 2024 & Harvard CS50x Certified. Passionate about AI, open-source contributions, and building scalable web/mobile apps. Explore my projects, skills, and achievements at sirat.me.",
+    "Siratul Islam | Embedded Systems Engineer & Open Source Enthusiast",
   keywords: [
     "Sirat",
     "Siratul Islam",
-    "Software Engineer",
+    "Embedded Systems",
+    "Operating Systems",
+    "Security",
+    "FIDO2",
+    "Real-time Systems",
+    "Open Source",
     "Portfolio",
-    "Web Developer",
-    "Frontend Developer",
-    "Backend Developer",
-    "SvelteKit",
-    "Next.js",
-    "ASP.NET Core",
   ],
   metadataBase: new URL("https://www.sirat.me"),
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "Siratul Islam | Software Engineer",
+    title: "Siratul Islam | Embedded Systems | Open Source",
     description:
-      "Siratul Islam | Software Engineer & Physics Student | Expert in SvelteKit, Next.js, Flutter & Full-Stack Development. Bronze Medalist at University Physics Competition 2024 & Harvard CS50x Certified. Passionate about AI, open-source contributions, and building scalable web/mobile apps. Explore my projects, skills, and achievements at sirat.me.",
+      "Siratul Islam | Embedded Systems Engineer & Open Source Enthusiast",
     url: "https://www.sirat.me",
     type: "website",
     images: [
       {
         url: "https://www.sirat.me/og-image.png",
-        alt: "Siratul Islam | Software Engineer",
+        alt: "Siratul Islam | Embedded Systems Engineer",
       },
     ],
   },

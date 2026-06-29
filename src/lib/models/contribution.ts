@@ -6,8 +6,9 @@ export interface Contribution {
     description: string;
     prNumber?: string;
     prUrl?: string;
+    loreUrl?: string;
     docsUrl?: string;
-    status: "Merged" | "Published";
+    status: "Merged" | "Published" | "Patch Accepted";
   }[];
   impact: string;
   fallbackCount?: number;

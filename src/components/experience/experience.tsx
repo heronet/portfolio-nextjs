@@ -1,25 +1,52 @@
 import hackules from "@/assets/experience/hackules.png";
 import cam from "@/assets/experience/cam.png";
 import sust from "@/assets/experience/sust.png";
-import lf from "@/assets/experience/lf.png";
+import tux from "@/assets/experience/tux.png";
+import zephyr from "@/assets/experience/zephyr.png";
 import Image from "next/image";
 import SectionHeader from "../common/section-header";
 
 const experiences = [
   {
-    company: "Linux Foundation - Zephyr RTOS Project",
-    logo: lf,
+    company: "The Linux Kernel",
+    logo: tux,
     roles: [
       {
-        title: "Biometrics Subsystem Maintainer, Zephyr Maintainers Team",
+        title:
+          "Driver Maintainer & Ad-Hoc Reviewer, Industrial I/O (IIO) Subsystem",
+        period: "Mar. 2026 - Present",
+        type: "Full-time",
+        location: "Remote",
+        details: [
+          "Maintain ST VL53L1X (Time-of-Flight) and QST QMC5883L (Magnetometer) drivers in the mainline Linux kernel IIO subsystem",
+          "Authored drivers and Device Tree bindings using latest kernel APIs; listed in MAINTAINERS for both drivers",
+          "Review patches on linux-iio mailing list and collaborate with upstream contributors",
+        ],
+      },
+    ],
+    technologies: [
+      "Linux Kernel",
+      "Embedded C",
+      "IIO Subsystem",
+      "Device Tree",
+      "I2C",
+      "SPI",
+      "Git",
+      "Patch Review",
+    ],
+  },
+  {
+    company: "Zephyr RTOS Project",
+    logo: zephyr,
+    roles: [
+      {
+        title: "Biometrics, Authentication & FIDO2 Subsystems Maintainer",
         period: "Feb. 2026 - Present",
         type: "Full-time",
         location: "Remote",
         details: [
-          "Promoted to subsystem maintainer after authoring Zephyr's biometrics subsystem (PR #100139), the first biometric authentication framework in the RTOS, enabling fingerprint-based security for embedded applications",
+          "Author and Maintainer of Zephyr's FIDO2 & Authentication subsystems (PR #104327), implementing CTAP2/CTAPHID transport, authenticatorMakeCredential, authenticatorGetAssertion, clientPIN, and credProtect",
           "Designed complete subsystem architecture including public API interfaces, device abstractions, driver framework, and Kconfig integration for biometric sensors",
-          "Implemented reference drivers for ZFM-x0 & GT-5x optical fingerprint sensors with enrollment, verification, and template management",
-          "Establish technical standards and review all community contributions to the biometrics subsystem",
         ],
       },
       {
@@ -38,13 +65,12 @@ const experiences = [
     technologies: [
       "Zephyr RTOS",
       "Embedded C",
-      "Subsystem Architecture",
+      "OS Architecture",
+      "FIDO2/CTAP2",
+      "USB",
+      "PSA Crypto",
       "Device Drivers",
       "Device Tree",
-      "Git",
-      "ARM",
-      "RISC-V",
-      "Xtensa",
       "Kconfig",
     ],
   },
@@ -55,7 +81,7 @@ const experiences = [
       {
         title:
           "Research Assistant - Department of Electrical and Electronic Engineering",
-        period: "Mar. 2025 - Present",
+        period: "Jun. 2025 - Present",
         type: "Full-time",
         location: "On-site",
         details: [
